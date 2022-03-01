@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script src="../js/formulas.js"></script>
+  <body>
+    <header></header>
+    <main>
+    <div class="card" id="triangulo">
+    <div class="card__header">
+      <h3>triangulo</h3>
+      <div class="card__img-boton">
+        <img src="" alt="" />
+        <button type="button" id="botonCambioTriangulo" onclick="botonCambianteTriangulo()">Area</button>
+      </div>
+    </div>
+    <div class="card__container-inputs">
+      <label for="input1Triangulo">lado 1</label>
+      <input type="number" id="input1Triangulo" />
+      <label for="input2Triangulo">lado 2</label>
+      <input type="number" id="input2Triangulo" />
+      <label for="input3Triangulo">lado 3</label>
+      <input type="number" id="input3Triangulo" />
+    </div>
+    <div class="card__container-respuesta">
+      <button type="button" id="calcularTriangulo" onclick="botonCalculoDeTrianguloPerimetro()">Calcular Perimetro</button>
+      <p id="respuestaTriangulo">respuesta</p>
+    </div>
+  </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

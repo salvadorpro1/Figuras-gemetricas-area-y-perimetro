@@ -1,26 +1,79 @@
 //Triangulo
 
-let calcularPerimetroTriangulo = () => {
-  let trianguloBase;
-  let trianguloAltura;
-  let trianguloLado1;
-  let trianguloLado2;
-  let trianguloLado3;
+let botonCambianteTriangulo = () =>{
+  let triangulo = document.getElementById("triangulo")
+  let botonCambioTriangulo = document.getElementById("botonCambioTriangulo") 
+  if(botonCambioTriangulo.innerText == "Area"){
+    triangulo.innerHTML = `
+    <div class="card__header">
+    <h3>triangulo</h3>
+    <div class="card__img-boton">
+      <img src="" alt="" />
+      <button type="button" id="botonCambioTriangulo" onclick="botonCambianteTriangulo()">Perimetro</button>
+    </div>
+  </div>
+  <div class="card__container-inputs">
+    <label for="input1Triangulo">Base</label>
+    <input type="number" id="input1Triangulo" />
+    <label for="input2Triangulo">Altura</label>
+    <input type="number" id="input2Triangulo" />
+  </div>
+  <div class="card__container-respuesta">
+    <button type="button" id="calcularTriangulo" onclick="botonCalculoDeTrianguloArea()">Calcular Area</button>
+    <p id="respuestaTriangulo">respuesta</p>
+  </div>`
+  }else{
+    triangulo.innerHTML = `
+    <div class="card__header">
+    <h3>triangulo</h3>
+    <div class="card__img-boton">
+      <img src="" alt="" />
+      <button type="button" id="botonCambioTriangulo" onclick="botonCambianteTriangulo()">Area</button>
+    </div>
+  </div>
+  <div class="card__container-inputs">
+    <label for="input1Triangulo">lado 1</label>
+    <input type="number" id="input1Triangulo" />
+    <label for="input2Triangulo">lado 2</label>
+    <input type="number" id="input2Triangulo" />
+    <label for="input3Triangulo">lado 3</label>
+    <input type="number" id="input3Triangulo" />
+  </div>
+  <div class="card__container-respuesta">
+    <button type="button" id="calcularTriangulo" onclick="botonCalculoDeTrianguloPerimetro()">Calcular Perimetro</button>
+    <p id="respuestaTriangulo">respuesta</p>
+  </div>
+    `
+  }
+}
+
+let calcularPerimetroTriangulo = (trianguloLado1,trianguloLado2,trianguloLado3) => {
+  let respuesta = document.getElementById("respuestaTriangulo")
   let perimetroTriangulo = trianguloLado1 + trianguloLado2 + trianguloLado3;
-  let areaTriangulo = (trianguloBase * trianguloAltura) / 2;
-  console.log(perimetroTriangulo);
+  respuesta.innerText = perimetroTriangulo
 };
 
-let calcularAreaTriangulo = () => {
-  let trianguloBase;
-  let trianguloAltura;
-  let trianguloLado1;
-  let trianguloLado2;
-  let trianguloLado3;
-  let perimetroTriangulo = trianguloLado1 + trianguloLado2 + trianguloLado3;
+let calcularAreaTriangulo = (trianguloBase,trianguloAltura) => {
+  let respuesta = document.getElementById("respuestaTriangulo")
   let areaTriangulo = (trianguloBase * trianguloAltura) / 2;
-  console.log(areaTriangulo);
+  respuesta.innerText = areaTriangulo
 };
+
+let botonCalculoDeTrianguloPerimetro = () =>{
+lado1 = parseFloat(document.getElementById("input1Triangulo").value)
+lado2 = parseFloat(document.getElementById("input2Triangulo").value)
+lado3 = parseFloat(document.getElementById("input3Triangulo").value)
+calcularPerimetroTriangulo(lado1,lado2,lado3)
+}
+
+let botonCalculoDeTrianguloArea = () =>{
+  base = parseFloat(document.getElementById("input1Triangulo").value)
+  altura = parseFloat(document.getElementById("input2Triangulo").value)
+  calcularAreaTriangulo(base,altura)
+
+}
+
+
 
 //Cuadrado
 
