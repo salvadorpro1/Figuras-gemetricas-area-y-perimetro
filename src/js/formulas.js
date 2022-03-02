@@ -288,21 +288,75 @@ let botonCalculoDeRomboArea = () =>{
 
 //Romboide
 
-let calcularPerimetroRomboide = () => {
-  let romboideBase;
-  let romboideAltura;
+let botonCambianteRomboide = () =>{
+let botonCambioRomboide = document.getElementById("botonCambioRomboide")
+let romboide = document.getElementById("romboide")
+if(botonCambioRomboide.innerText == "Area"){
+  romboide.innerHTML = `
+  <div class="card__header">
+  <h3>Romboide</h3>
+  <div class="card__img-boton">
+    <img src="" alt="" />
+    <button type="button" id="botonCambioRomboide" onclick="botonCambianteRomboide()">Perimetro</button>
+  </div>
+</div>
+<div class="card__container-inputs">
+  <label for="input1Romboide">Base</label>
+  <input type="number" id="input1Romboide" />
+  <label for="input2Romboide">Altura</label>
+  <input type="number" id="input2Romboide" />
+</div>
+<div class="card__container-respuesta">
+  <button type="button" id="calcularRomboide" onclick="botonCalculoDeRomboideArea()">Calcular Area</button>
+  <p id="respuestaRomboide">respuesta</p>
+</div>
+  `
+}else{
+  romboide.innerHTML = `
+  <div class="card__header">
+  <h3>Romboide</h3>
+  <div class="card__img-boton">
+    <img src="" alt="" />
+    <button type="button" id="botonCambioRomboide" onclick="botonCambianteRomboide()">Area</button>
+  </div>
+</div>
+<div class="card__container-inputs">
+  <label for="input1Romboide">Base</label>
+  <input type="number" id="input1Romboide" />
+  <label for="input2Romboide">Altura</label>
+  <input type="number" id="input2Romboide" />
+</div>
+<div class="card__container-respuesta">
+  <button type="button" id="calcularRomboide" onclick="botonCalculoDeRomboidePerimetro()">Calcular Perimetro</button>
+  <p id="respuestaRomboide">respuesta</p>
+</div>
+  `
+}
+}
+
+let calcularPerimetroRomboide = (romboideBase,romboideAltura) => {
+  let respuesta = document.getElementById("respuestaRomboide")
   let perimetroRomboide = romboideBase * 2 + romboideAltura * 2;
-  let areaRomboide = romboideBase * romboideAltura;
-  console.log(perimetroRomboide);
+  respuesta.innerText = perimetroRomboide
 };
 
-let calcularAreaRomboide = () => {
-  let romboideBase;
-  let romboideAltura;
-  let perimetroRomboide = romboideBase * 2 + romboideAltura * 2;
+let calcularAreaRomboide = (romboideBase,romboideAltura) => {
+  let respuesta = document.getElementById("respuestaRomboide")
   let areaRomboide = romboideBase * romboideAltura;
-  console.log(areaRomboide);
+  respuesta.innerText = areaRomboide
 };
+
+let botonCalculoDeRomboidePerimetro = () =>{
+let base = document.getElementById("input1Romboide").value
+let altura = document.getElementById("input2Romboide").value
+calcularPerimetroRomboide(base,altura)
+}
+
+let botonCalculoDeRomboideArea = () =>{
+let base = document.getElementById("input1Romboide").value
+let altura = document.getElementById("input2Romboide").value
+calcularAreaRomboide(base,altura)
+}
 
 //Trapecio
 
