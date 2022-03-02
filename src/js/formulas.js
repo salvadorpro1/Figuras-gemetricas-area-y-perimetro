@@ -146,21 +146,76 @@ botonCalculoDeCuadradoArea = () =>{
 
 //Rectangulo
 
-let calcularPerimetroRectangulo = () => {
-  let rectanguloBase;
-  let rectanguloAltura;
-  let areaRectangulo = rectanguloBase * rectanguloAltura;
+let botonCambianteRectangulo = () =>{
+let rectangulo = document.getElementById("rectangulo")
+let botonCambioRectangulo = document.getElementById("botonCambioRectangulo")
+if(botonCambioRectangulo.innerText == "Area"){
+rectangulo.innerHTML = `
+<div class="card__header">
+<h3>Rectangulo</h3>
+<div class="card__img-boton">
+  <img src="" alt="" />
+  <button type="button" id="botonCambioRectangulo" onclick="botonCambianteRectangulo()">Perimetro</button>
+</div>
+</div>
+<div class="card__container-inputs">
+<label for="input1Rectangulo">Base</label>
+<input type="number" id="input1Rectangulo" />
+<label for="input2Rectangulo">Altura</label>
+<input type="number" id="input2Rectangulo" />
+</div>
+<div class="card__container-respuesta">
+<button type="button" id="calcularRectangulo" onclick="botonCalculoDeRectanguloArea()">Calcular Area</button>
+<p id="respuestaRectangulo">respuesta</p>
+</div>
+`
+}else{
+rectangulo.innerHTML = `
+<div class="card__header">
+<h3>Rectangulo</h3>
+<div class="card__img-boton">
+  <img src="" alt="" />
+  <button type="button" id="botonCambioRectangulo" onclick="botonCambianteRectangulo()">Area</button>
+</div>
+</div>
+<div class="card__container-inputs">
+<label for="input1Rectangulo">Base</label>
+<input type="number" id="input1Rectangulo" />
+<label for="input2Rectangulo">Altura</label>
+<input type="number" id="input2Rectangulo" />
+</div>
+<div class="card__container-respuesta">
+<button type="button" id="calcularRectangulo" onclick="botonCalculoDeRectanguloPerimetro()">Calcular Perimetro</button>
+<p id="respuestaRectangulo">respuesta</p>
+</div>
+`
+}
+}
+
+
+let calcularPerimetroRectangulo = (rectanguloBase,rectanguloAltura) => {
+  let respuesta = document.getElementById("respuestaRectangulo")
   let perimetroRectangulo = rectanguloBase * 2 + rectanguloAltura * 2;
-  console.log(perimetroRectangulo);
+  respuesta.innerText = perimetroRectangulo
 };
 
-let calcularAreaRectangulo = () => {
-  let rectanguloBase;
-  let rectanguloAltura;
+let calcularAreaRectangulo = (rectanguloBase,rectanguloAltura) => {
+  let respuesta = document.getElementById("respuestaRectangulo")
   let areaRectangulo = rectanguloBase * rectanguloAltura;
-  let perimetroRectangulo = rectanguloBase * 2 + rectanguloAltura * 2;
-  console.log(areaRectangulo);
+  respuesta.innerText = areaRectangulo
 };
+
+let botonCalculoDeRectanguloPerimetro = () =>{
+  let base = document.getElementById("input1Rectangulo").value
+  let altura = document.getElementById("input2Rectangulo").value
+  calcularPerimetroRectangulo(base,altura)
+}
+
+let botonCalculoDeRectanguloArea = () =>{
+  let base = document.getElementById("input1Rectangulo").value
+  let altura = document.getElementById("input2Rectangulo").value
+  calcularAreaRectangulo(base,altura)
+}
 
 //Rombo
 
