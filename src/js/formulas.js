@@ -219,23 +219,72 @@ let botonCalculoDeRectanguloArea = () =>{
 
 //Rombo
 
-let calcularPerimetroRombo = () => {
-  let romboLado;
-  let romboDiagonalMenor;
-  let romboDiagonalMayor;
+botonCambianteRombo = () =>{
+let rombo = document.getElementById("rombo")
+let botonCambioRombo = document.getElementById("botonCambioRombo")
+if(botonCambioRombo.innerText == "Area"){
+  rombo.innerHTML = `
+  <div class="card__header">
+  <h3>Rombo</h3>
+  <div class="card__img-boton">
+    <img src="" alt="" />
+    <button type="button" id="botonCambioRombo" onclick="botonCambianteRombo()">Perimetro</button>
+  </div>
+</div>
+<div class="card__container-inputs">
+  <label for="input1Rombo">Diagonal mayor</label>
+  <input type="number" id="input1Rombo" />
+  <label for="input2Rombo">Diagonal menor</label>
+  <input type="number" id="input2Rombo" />
+</div>
+<div class="card__container-respuesta">
+  <button type="button" id="calcularRombo" onclick="botonCalculoDeRomboArea()">Calcular Area</button>
+  <p id="respuestaRombo">respuesta</p>
+</div>
+  `
+}else{
+  rombo.innerHTML = `
+  <div class="card__header">
+  <h3>Rombo</h3>
+  <div class="card__img-boton">
+    <img src="" alt="" />
+    <button type="button" id="botonCambioRombo" onclick="botonCambianteRombo()">Area</button>
+  </div>
+</div>
+<div class="card__container-inputs">
+  <label for="input1Rombo">lado 1</label>
+  <input type="number" id="input1Rombo" />
+</div>
+<div class="card__container-respuesta">
+  <button type="button" id="calcularRombo" onclick="botonCalculoDeRomboPerimetro()">Calcular Perimetro</button>
+  <p id="respuestaRombo">respuesta</p>
+</div>
+  `
+}
+}
+
+let calcularPerimetroRombo = (romboLado) => {
+  let respuesta = document.getElementById("respuestaRombo")
   let perimetroRombo = romboLado * 4;
-  let areaRombo = (romboDiagonalMayor * romboDiagonalMenor) / 2;
-  console.log(perimetroRombo);
+  respuesta.innerText = perimetroRombo
 };
 
-let calcularAreaRombo = () => {
-  let romboLado;
-  let romboDiagonalMenor;
-  let romboDiagonalMayor;
-  let perimetroRombo = romboLado * 4;
+let calcularAreaRombo = (romboDiagonalMenor,romboDiagonalMayor) => {
+  let respuesta = document.getElementById("respuestaRombo")
   let areaRombo = (romboDiagonalMayor * romboDiagonalMenor) / 2;
-  console.log(areaRombo);
+  respuesta.innerText = areaRombo
 };
+
+let botonCalculoDeRomboPerimetro = () =>{
+let ladoRombo = document.getElementById("input1Rombo").value
+calcularPerimetroRombo(ladoRombo)
+}
+
+let botonCalculoDeRomboArea = () =>{
+  diagonalMayor = document.getElementById("input1Rombo").value
+  diagonalMenor = document.getElementById("input2Rombo").value
+  calcularAreaRombo(diagonalMenor,diagonalMayor)
+}
 
 //Romboide
 
@@ -325,7 +374,7 @@ let calcularAreaHexagono = () => {
 
 //Circulo
 
-let calcularAreaPerimetro = () => {
+let calcularPerimetroCirculo = () => {
   let circuloDiametro;
   let circuloPI = Math.PI;
   let circuloRadio;
