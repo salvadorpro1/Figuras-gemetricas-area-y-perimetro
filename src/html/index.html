@@ -103,6 +103,46 @@
       <p id="respuestaRomboide">respuesta</p>
     </div>
   </div>
+  <div class="card" id="trapecio"><!--Trapecio-->
+    <div class="card__header">
+      <h3>Trapecio</h3>
+      <div class="card__img-boton">
+        <img src="" alt="" />
+        <button type="button" id="botonCambioTrapecio" onclick="botonCambianteTrapecio()">Area</button>
+      </div>
+    </div>
+    <div class="card__container-inputs">
+      <label for="input1Trapecio">lado 1</label>
+      <input type="number" id="input1Trapecio" />
+      <label for="input2Trapecio">lado 2</label>
+      <input type="number" id="input2Trapecio" />
+      <label for="input3Trapecio">lado 3</label>
+      <input type="number" id="input3Trapecio" />
+      <label for="input4Trapecio">lado 4</label>
+      <input type="number" id="input4Trapecio" />
+    </div>
+    <div class="card__container-respuesta">
+      <button type="button" id="calcularTrapecio" onclick="botonCalculoDeTrapecioPerimetro()">Calcular Perimetro</button>
+      <p id="respuestaTrapecio">respuesta</p>
+    </div>
+  </div>
+  <div class="card" id="pentagono"><!--Pentagono-->
+    <div class="card__header">
+      <h3>Pentagono</h3>
+      <div class="card__img-boton">
+        <img src="" alt="" />
+        <button type="button" id="botonCambioPentagono" onclick="botonCambiantePentagono()">Area</button>
+      </div>
+    </div>
+    <div class="card__container-inputs">
+      <label for="input1Pentagono">Base</label>
+      <input type="number" id="input1Pentagono" />
+    </div>
+    <div class="card__container-respuesta">
+      <button type="button" id="calcularPentagono" onclick="botonCalculoDePentagonoPerimetro()">Calcular Perimetro</button>
+      <p id="respuestaPentagono">respuesta</p>
+    </div>
+  </div>
     </main>
     <footer></footer>
   </body>
