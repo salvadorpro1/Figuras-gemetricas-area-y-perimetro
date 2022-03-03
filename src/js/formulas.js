@@ -358,9 +358,9 @@ let botonCalculoDeRomboideArea = () => {
 //Trapecio
 
 let botonCambianteTrapecio = () => {
-  let trapecio = document.getElementById("trapecio")
-  let botonCambioTrapecio = document.getElementById("botonCambioTrapecio")
-  if(botonCambioTrapecio.innerText == "Area"){
+  let trapecio = document.getElementById("trapecio");
+  let botonCambioTrapecio = document.getElementById("botonCambioTrapecio");
+  if (botonCambioTrapecio.innerText == "Area") {
     trapecio.innerHTML = `
     <div class="card__header">
     <h3>Trapecio</h3>
@@ -381,8 +381,8 @@ let botonCambianteTrapecio = () => {
     <button type="button" id="calcularTrapecio" onclick="botonCalculoDeTrapecioArea()">Calcular Area</button>
     <p id="respuestaTrapecio">respuesta</p>
   </div>
-    `
-  }else{
+    `;
+  } else {
     trapecio.innerHTML = `
     <div class="card__header">
     <h3>Trapecio</h3>
@@ -405,7 +405,7 @@ let botonCambianteTrapecio = () => {
     <button type="button" id="calcularTrapecio" onclick="botonCalculoDeTrapecioPerimetro()">Calcular Perimetro</button>
     <p id="respuestaTrapecio">respuesta</p>
   </div>
-    `
+    `;
   }
 };
 
@@ -449,11 +449,11 @@ let botonCalculoDeTrapecioArea = () => {
 
 //Pentagono
 
-let botonCambiantePentagono = () =>{
-let pentagono = document.getElementById("pentagono")
-let botonCambioPentagono = document.getElementById("botonCambioPentagono")
-if(botonCambioPentagono.innerText == "Area"){
-  pentagono.innerHTML = `
+let botonCambiantePentagono = () => {
+  let pentagono = document.getElementById("pentagono");
+  let botonCambioPentagono = document.getElementById("botonCambioPentagono");
+  if (botonCambioPentagono.innerText == "Area") {
+    pentagono.innerHTML = `
   <div class="card__header">
   <h3>Pentagono</h3>
   <div class="card__img-boton">
@@ -471,9 +471,9 @@ if(botonCambioPentagono.innerText == "Area"){
   <button type="button" id="calcularPentagono" onclick="botonCalculoDePentagonoArea()">Calcular Area</button>
   <p id="respuestaPentagono">respuesta</p>
 </div>
-  `
-}else{
-  pentagono.innerHTML = `
+  `;
+  } else {
+    pentagono.innerHTML = `
   <div class="card__header">
   <h3>Pentagono</h3>
   <div class="card__img-boton">
@@ -489,9 +489,9 @@ if(botonCambioPentagono.innerText == "Area"){
   <button type="button" id="calcularPentagono" onclick="botonCalculoDePentagonoPerimetro()">Calcular Perimetro</button>
   <p id="respuestaPentagono">respuesta</p>
 </div>
-  `
-}
-}
+  `;
+  }
+};
 
 let calcularPerimetroPentagono = (pentagonoBase) => {
   let perimetroPentagono = pentagonoBase * 5;
@@ -499,57 +499,88 @@ let calcularPerimetroPentagono = (pentagonoBase) => {
   resultado.innerText = perimetroPentagono;
 };
 
-let calcularAreaPentagono = (pentagonoApotema,pentagonoBase) => {
+let calcularAreaPentagono = (pentagonoApotema, pentagonoBase) => {
   let perimetroPentagono = pentagonoBase * 5;
   let areaPentagono = (perimetroPentagono * pentagonoApotema) / 2;
   let resultado = document.getElementById("respuestaPentagono");
   resultado.innerText = areaPentagono;
 };
 
-let botonCalculoDePentagonoPerimetro = () =>{
-let base = document.getElementById("input1Pentagono").value
-calcularPerimetroPentagono(base)
-}
-
-let botonCalculoDePentagonoArea = () =>{
-  let Apotema = document.getElementById("input1Pentagono").value
-  let base = document.getElementById("input2Pentagono").value
-  calcularAreaPentagono(Apotema,base)
-}
-//Hexagono
-
-let calcularPerimetroHexagono = () => {
-  let hexagonoApotema;
-  let hexagonoBase;
-  let perimetroHexagono = hexagonoBase * 6;
-  let areaHexagono = (perimetroHexagono * hexagonoApotema) / 2;
-  console.log(perimetroHexagono);
+let botonCalculoDePentagonoPerimetro = () => {
+  let base = document.getElementById("input1Pentagono").value;
+  calcularPerimetroPentagono(base);
 };
 
-let calcularAreaHexagono = () => {
-  let hexagonoApotema;
-  let hexagonoBase;
-  let perimetroHexagono = hexagonoBase * 6;
-  let areaHexagono = (perimetroHexagono * hexagonoApotema) / 2;
-  console.log(areaHexagono);
+let botonCalculoDePentagonoArea = () => {
+  let Apotema = document.getElementById("input1Pentagono").value;
+  let base = document.getElementById("input2Pentagono").value;
+  calcularAreaPentagono(Apotema, base);
 };
 
 //Circulo
 
-let calcularPerimetroCirculo = () => {
-  let circuloDiametro;
-  let circuloPI = Math.PI;
-  let circuloRadio;
-  let perimetroCirculo = circuloDiametro * circuloPI;
-  let areaCirculo = circuloPI * circuloRadio ** 2;
-  console.log(perimetroCirculo);
+let botonCambianteCirculo = () => {
+  let circulo = document.getElementById("circulo");
+  let botonCambioCirculo = document.getElementById("botonCambioCirculo");
+  if (botonCambioCirculo.innerText == "Area") {
+    circulo.innerHTML = `
+    <div class="card__header">
+    <h3>Circulo</h3>
+    <div class="card__img-boton">
+      <img src="" alt="" />
+      <button type="button" id="botonCambioCirculo" onclick="botonCambianteCirculo()">Perimetro</button>
+    </div>
+  </div>
+  <div class="card__container-inputs">
+    <label for="input1Circulo">Radio</label>
+    <input type="number" id="input1Circulo" />
+  </div>
+  <div class="card__container-respuesta">
+    <button type="button" id="calcularCirculo" onclick="botonCalculoDeCirculoArea()">Calcular Area</button>
+    <p id="respuestaCirculo">respuesta</p>
+  </div>
+    `;
+  } else {
+    circulo.innerHTML = `
+    <div class="card__header">
+    <h3>Circulo</h3>
+    <div class="card__img-boton">
+      <img src="" alt="" />
+      <button type="button" id="botonCambioCirculo" onclick="botonCambianteCirculo()">Area</button>
+    </div>
+  </div>
+  <div class="card__container-inputs">
+    <label for="input1Circulo">Diametro</label>
+    <input type="number" id="input1Circulo" />
+  </div>
+  <div class="card__container-respuesta">
+    <button type="button" id="calcularCirculo" onclick="botonCalculoDeCirculoPerimetro()">Calcular Perimetro</button>
+    <p id="respuestaCirculo">respuesta</p>
+  </div>
+    `;
+  }
 };
 
-let calcularAreaCirculo = () => {
-  let circuloDiametro;
+let calcularPerimetroCirculo = (circuloDiametro) => {
+  let respuesta = document.getElementById("respuestaCirculo");
   let circuloPI = Math.PI;
-  let circuloRadio;
   let perimetroCirculo = circuloDiametro * circuloPI;
+  respuesta.innerText = perimetroCirculo.toFixed(1);
+};
+
+let calcularAreaCirculo = (circuloRadio) => {
+  let respuesta = document.getElementById("respuestaCirculo");
+  let circuloPI = Math.PI;
   let areaCirculo = circuloPI * circuloRadio ** 2;
-  console.log(areaCirculo);
+  respuesta.innerText = areaCirculo.toFixed(1);
+};
+
+let botonCalculoDeCirculoPerimetro = () => {
+  let diametro = document.getElementById("input1Circulo").value;
+  calcularPerimetroCirculo(diametro);
+};
+
+let botonCalculoDeCirculoArea = () => {
+  let radio = document.getElementById("input1Circulo").value;
+  calcularAreaCirculo(radio);
 };
