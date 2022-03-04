@@ -54,15 +54,22 @@ let calcularPerimetroTriangulo = (
 ) => {
   let respuesta = document.getElementById("respuestaTriangulo");
   let perimetroTriangulo = trianguloLado1 + trianguloLado2 + trianguloLado3;
-  respuesta.innerText = perimetroTriangulo;
+  if(isNaN(perimetroTriangulo)){
+    respuesta.innerText = 0
+  }else{
+    respuesta.innerText = perimetroTriangulo;
+  }
 };
 
 let calcularAreaTriangulo = (trianguloBase, trianguloAltura) => {
   let respuesta = document.getElementById("respuestaTriangulo");
   let areaTriangulo = (trianguloBase * trianguloAltura) / 2;
-  respuesta.innerText = areaTriangulo;
+  if(isNaN(areaTriangulo)){
+    respuesta.innerText = 0
+  }else{
+    respuesta.innerText = areaTriangulo;
+  }
 };
-
 let botonCalculoDeTrianguloPerimetro = () => {
   lado1 = parseFloat(document.getElementById("input1Triangulo").value);
   lado2 = parseFloat(document.getElementById("input2Triangulo").value);
@@ -418,7 +425,11 @@ let calcularPerimetroTrapecio = (
   let respuesta = document.getElementById("respuestaTrapecio");
   let perimetroTrapecio =
     TrapecioLado1 + TrapecioLado2 + TrapecioLado3 + TrapecioLado4;
-  respuesta.innerText = perimetroTrapecio;
+    if(isNaN(perimetroTrapecio)){
+      respuesta.innerText = 0
+    }else{
+      respuesta.innerText = perimetroTrapecio;
+    }
 };
 
 let calcularAreaTrapecio = (
@@ -429,7 +440,11 @@ let calcularAreaTrapecio = (
   let respuesta = document.getElementById("respuestaTrapecio");
   let areaTrapecio =
     (trapecioAltura * (trapecioBaseMenor + trapecioBaseMayor)) / 2;
-  respuesta.innerText = areaTrapecio;
+    if(isNaN(areaTrapecio)){
+      respuesta.innerText = 0
+    }else{
+      respuesta.innerText = areaTrapecio;
+    }
 };
 
 let botonCalculoDeTrapecioPerimetro = () => {
