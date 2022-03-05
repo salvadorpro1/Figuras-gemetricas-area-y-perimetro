@@ -20,7 +20,7 @@ let botonCambianteTriangulo = () => {
   </div>
   <div class="card__container-respuesta">
     <button type="button" id="calcularTriangulo" onclick="botonCalculoDeTrianguloArea()">Calcular Area</button>
-    <p id="respuestaTriangulo">respuesta</p>
+    <p id="respuestaTriangulo"></p>
   </div>`;
   } else {
     triangulo.innerHTML = `
@@ -41,7 +41,7 @@ let botonCambianteTriangulo = () => {
   </div>
   <div class="card__container-respuesta">
     <button type="button" id="calcularTriangulo" onclick="botonCalculoDeTrianguloPerimetro()">Calcular Perimetro</button>
-    <p id="respuestaTriangulo">respuesta</p>
+    <p id="respuestaTriangulo"></p>
   </div>
     `;
   }
@@ -103,7 +103,7 @@ let botonCambianteCuadrado = () => {
   </div>
   <div class="card__container-respuesta">
     <button type="button" id="calcularCuadrado" onclick="botonCalculoDeCuadradoArea()">Calcular Area</button>
-    <p id="respuestaCuadrado">respuesta</p>
+    <p id="respuestaCuadrado"></p>
   </div>
     `;
   } else {
@@ -121,7 +121,7 @@ let botonCambianteCuadrado = () => {
     </div>
     <div class="card__container-respuesta">
       <button type="button" id="calcularCuadrado" onclick="botonCalculoDeCuadradoPerimetro()">Calcular Perimetro</button>
-      <p id="respuestaCuadrado">respuesta</p>
+      <p id="respuestaCuadrado"></p>
     </div>
     `;
   }
@@ -171,7 +171,7 @@ let botonCambianteRectangulo = () => {
 </div>
 <div class="card__container-respuesta">
 <button type="button" id="calcularRectangulo" onclick="botonCalculoDeRectanguloArea()">Calcular Area</button>
-<p id="respuestaRectangulo">respuesta</p>
+<p id="respuestaRectangulo"></p>
 </div>
 `;
   } else {
@@ -191,7 +191,7 @@ let botonCambianteRectangulo = () => {
 </div>
 <div class="card__container-respuesta">
 <button type="button" id="calcularRectangulo" onclick="botonCalculoDeRectanguloPerimetro()">Calcular Perimetro</button>
-<p id="respuestaRectangulo">respuesta</p>
+<p id="respuestaRectangulo"></p>
 </div>
 `;
   }
@@ -243,7 +243,7 @@ botonCambianteRombo = () => {
 </div>
 <div class="card__container-respuesta">
   <button type="button" id="calcularRombo" onclick="botonCalculoDeRomboArea()">Calcular Area</button>
-  <p id="respuestaRombo">respuesta</p>
+  <p id="respuestaRombo"></p>
 </div>
   `;
   } else {
@@ -261,7 +261,7 @@ botonCambianteRombo = () => {
 </div>
 <div class="card__container-respuesta">
   <button type="button" id="calcularRombo" onclick="botonCalculoDeRomboPerimetro()">Calcular Perimetro</button>
-  <p id="respuestaRombo">respuesta</p>
+  <p id="respuestaRombo"></p>
 </div>
   `;
   }
@@ -312,7 +312,7 @@ let botonCambianteRomboide = () => {
 </div>
 <div class="card__container-respuesta">
   <button type="button" id="calcularRomboide" onclick="botonCalculoDeRomboideArea()">Calcular Area</button>
-  <p id="respuestaRomboide">respuesta</p>
+  <p id="respuestaRomboide"></p>
 </div>
   `;
   } else {
@@ -332,7 +332,7 @@ let botonCambianteRomboide = () => {
 </div>
 <div class="card__container-respuesta">
   <button type="button" id="calcularRomboide" onclick="botonCalculoDeRomboidePerimetro()">Calcular Perimetro</button>
-  <p id="respuestaRomboide">respuesta</p>
+  <p id="respuestaRomboide"></p>
 </div>
   `;
   }
@@ -386,7 +386,7 @@ let botonCambianteTrapecio = () => {
   </div>
   <div class="card__container-respuesta">
     <button type="button" id="calcularTrapecio" onclick="botonCalculoDeTrapecioArea()">Calcular Area</button>
-    <p id="respuestaTrapecio">respuesta</p>
+    <p id="respuestaTrapecio"></p>
   </div>
     `;
   } else {
@@ -410,7 +410,7 @@ let botonCambianteTrapecio = () => {
   </div>
   <div class="card__container-respuesta">
     <button type="button" id="calcularTrapecio" onclick="botonCalculoDeTrapecioPerimetro()">Calcular Perimetro</button>
-    <p id="respuestaTrapecio">respuesta</p>
+    <p id="respuestaTrapecio"></p>
   </div>
     `;
   }
@@ -484,7 +484,7 @@ let botonCambiantePentagono = () => {
 </div>
 <div class="card__container-respuesta">
   <button type="button" id="calcularPentagono" onclick="botonCalculoDePentagonoArea()">Calcular Area</button>
-  <p id="respuestaPentagono">respuesta</p>
+  <p id="respuestaPentagono"></p>
 </div>
   `;
   } else {
@@ -502,7 +502,7 @@ let botonCambiantePentagono = () => {
 </div>
 <div class="card__container-respuesta">
   <button type="button" id="calcularPentagono" onclick="botonCalculoDePentagonoPerimetro()">Calcular Perimetro</button>
-  <p id="respuestaPentagono">respuesta</p>
+  <p id="respuestaPentagono"></p>
 </div>
   `;
   }
@@ -552,7 +552,7 @@ let botonCambianteCirculo = () => {
   </div>
   <div class="card__container-respuesta">
     <button type="button" id="calcularCirculo" onclick="botonCalculoDeCirculoArea()">Calcular Area</button>
-    <p id="respuestaCirculo">respuesta</p>
+    <p id="respuestaCirculo"></p>
   </div>
     `;
   } else {
@@ -570,7 +570,7 @@ let botonCambianteCirculo = () => {
   </div>
   <div class="card__container-respuesta">
     <button type="button" id="calcularCirculo" onclick="botonCalculoDeCirculoPerimetro()">Calcular Perimetro</button>
-    <p id="respuestaCirculo">respuesta</p>
+    <p id="respuestaCirculo"></p>
   </div>
     `;
   }

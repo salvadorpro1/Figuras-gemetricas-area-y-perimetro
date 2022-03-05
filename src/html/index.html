@@ -5,161 +5,274 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="../style/style.css" />
   </head>
   <script src="../js/formulas.js"></script>
   <body>
-    <header></header>
+    <header>
+      <div class="container-title">
+        <h1 class="container-title__h1">
+          Figuras geometricas calcular area y perimetro
+        </h1>
+      </div>
+    </header>
     <main>
-    <div class="card" id="triangulo"><!--Triangulo-->
-    <div class="card__header">
-      <h3>Triangulo</h3>
-      <div class="card__img-boton">
-        <img src="../img/triangulo.png" alt="Figura de un triangulo" />
-        <button type="button" id="botonCambioTriangulo" onclick="botonCambianteTriangulo()">Area</button>
-      </div>
-    </div>
-    <div class="card__container-inputs">
-      <label for="input1Triangulo">lado 1</label>
-      <input type="number" id="input1Triangulo" />
-      <label for="input2Triangulo">lado 2</label>
-      <input type="number" id="input2Triangulo" />
-      <label for="input3Triangulo">lado 3</label>
-      <input type="number" id="input3Triangulo" />
-    </div>
-    <div class="card__container-respuesta">
-      <button type="button" id="calcularTriangulo" onclick="botonCalculoDeTrianguloPerimetro()">Calcular Perimetro</button>
-      <p id="respuestaTriangulo">respuesta</p>
-    </div>
-  </div>
-  <div class="card" id="cuadrado"><!--Cuadrado-->
-    <div class="card__header">
-      <h3>Cuadrado</h3>
-      <div class="card__img-boton">
-        <img src="../img/cuadrado.png" alt="Figura de un cuadrado" />
-        <button type="button" id="botonCambioCuadrado" onclick="botonCambianteCuadrado()">Area</button>
-      </div>
-    </div>
-    <div class="card__container-inputs">
-      <label for="input1Cuadrado">lado 1</label>
-      <input type="number" id="input1Cuadrado" />
-    </div>
-    <div class="card__container-respuesta">
-      <button type="button" id="calcularCuadrado" onclick="botonCalculoDeCuadradoPerimetro()">Calcular Perimetro</button>
-      <p id="respuestaCuadrado">respuesta</p>
-    </div>
-  </div>
-  <div class="card" id="rectangulo"><!--Rectangulo-->
-    <div class="card__header">
-      <h3>Rectangulo</h3>
-      <div class="card__img-boton">
-        <img src="../img/rectangulo.png" alt="Figura de un rectangulo" />
-        <button type="button" id="botonCambioRectangulo" onclick="botonCambianteRectangulo()">Area</button>
-      </div>
-    </div>
-    <div class="card__container-inputs">
-      <label for="input1Rectangulo">Base</label>
-      <input type="number" id="input1Rectangulo" />
-      <label for="input2Rectangulo">Altura</label>
-      <input type="number" id="input2Rectangulo" />
-    </div>
-    <div class="card__container-respuesta">
-      <button type="button" id="calcularRectangulo" onclick="botonCalculoDeRectanguloPerimetro()">Calcular Perimetro</button>
-      <p id="respuestaRectangulo">respuesta</p>
-    </div>
-  </div>
-  <div class="card" id="rombo"><!--Rombo-->
-    <div class="card__header">
-      <h3>Rombo</h3>
-      <div class="card__img-boton">
-        <img src="../img/rombo.png" alt="Figura de un rombo" />
-        <button type="button" id="botonCambioRombo" onclick="botonCambianteRombo()">Area</button>
-      </div>
-    </div>
-    <div class="card__container-inputs">
-      <label for="input1Rombo">lado 1</label>
-      <input type="number" id="input1Rombo" />
-    </div>
-    <div class="card__container-respuesta">
-      <button type="button" id="calcularRombo" onclick="botonCalculoDeRomboPerimetro()">Calcular Perimetro</button>
-      <p id="respuestaRombo">respuesta</p>
-    </div>
-  </div>
-  <div class="card" id="romboide"><!--Romboide-->
-    <div class="card__header">
-      <h3>Romboide</h3>
-      <div class="card__img-boton">
-        <img src="../img/romboide.png" alt="Figura de un romboide" />
-        <button type="button" id="botonCambioRomboide" onclick="botonCambianteRomboide()">Area</button>
-      </div>
-    </div>
-    <div class="card__container-inputs">
-      <label for="input1Romboide">Base</label>
-      <input type="number" id="input1Romboide" />
-      <label for="input2Romboide">Altura</label>
-      <input type="number" id="input2Romboide" />
-    </div>
-    <div class="card__container-respuesta">
-      <button type="button" id="calcularRomboide" onclick="botonCalculoDeRomboidePerimetro()">Calcular Perimetro</button>
-      <p id="respuestaRomboide">respuesta</p>
-    </div>
-  </div>
-  <div class="card" id="trapecio"><!--Trapecio-->
-    <div class="card__header">
-      <h3>Trapecio</h3>
-      <div class="card__img-boton">
-        <img src="../img/trapecio.png" alt="Figura de un trapecio" />
-        <button type="button" id="botonCambioTrapecio" onclick="botonCambianteTrapecio()">Area</button>
-      </div>
-    </div>
-    <div class="card__container-inputs">
-      <label for="input1Trapecio">lado 1</label>
-      <input type="number" id="input1Trapecio" />
-      <label for="input2Trapecio">lado 2</label>
-      <input type="number" id="input2Trapecio" />
-      <label for="input3Trapecio">lado 3</label>
-      <input type="number" id="input3Trapecio" />
-      <label for="input4Trapecio">lado 4</label>
-      <input type="number" id="input4Trapecio" />
-    </div>
-    <div class="card__container-respuesta">
-      <button type="button" id="calcularTrapecio" onclick="botonCalculoDeTrapecioPerimetro()">Calcular Perimetro</button>
-      <p id="respuestaTrapecio">respuesta</p>
-    </div>
-  </div>
-  <div class="card" id="pentagono"><!--Pentagono-->
-    <div class="card__header">
-      <h3>Pentagono</h3>
-      <div class="card__img-boton">
-        <img src="../img/pentagono.png" alt="Figura de un pentagono" />
-        <button type="button" id="botonCambioPentagono" onclick="botonCambiantePentagono()">Area</button>
-      </div>
-    </div>
-    <div class="card__container-inputs">
-      <label for="input1Pentagono">Base</label>
-      <input type="number" id="input1Pentagono" />
-    </div>
-    <div class="card__container-respuesta">
-      <button type="button" id="calcularPentagono" onclick="botonCalculoDePentagonoPerimetro()">Calcular Perimetro</button>
-      <p id="respuestaPentagono">respuesta</p>
-    </div>
-  </div>
-  <div class="card" id="circulo"><!--Circulo-->
-    <div class="card__header">
-      <h3>Circulo</h3>
-      <div class="card__img-boton">
-        <img src="../img/circulo.png" alt="Figura de un circulo" />
-        <button type="button" id="botonCambioCirculo" onclick="botonCambianteCirculo()">Area</button>
-      </div>
-    </div>
-    <div class="card__container-inputs">
-      <label for="input1Circulo">Diametro</label>
-      <input type="number" id="input1Circulo" />
-    </div>
-    <div class="card__container-respuesta">
-      <button type="button" id="calcularCirculo" onclick="botonCalculoDeCirculoPerimetro()">Calcular Perimetro</button>
-      <p id="respuestaCirculo">respuesta</p>
-    </div>
-  </div>
+      <section class="card-container">
+        <div class="card" id="triangulo">
+          <!--Triangulo-->
+          <div class="card__header">
+            <h3>Triangulo</h3>
+            <div class="card__img-boton">
+              <img src="../img/triangulo.png" alt="Figura de un triangulo" />
+              <button
+                type="button"
+                id="botonCambioTriangulo"
+                onclick="botonCambianteTriangulo()"
+              >
+                Area
+              </button>
+            </div>
+          </div>
+          <div class="card__container-inputs">
+            <label for="input1Triangulo">lado 1</label>
+            <input type="number" id="input1Triangulo" />
+            <label for="input2Triangulo">lado 2</label>
+            <input type="number" id="input2Triangulo" />
+            <label for="input3Triangulo">lado 3</label>
+            <input type="number" id="input3Triangulo" />
+          </div>
+          <div class="card__container-respuesta">
+            <button
+              type="button"
+              id="calcularTriangulo"
+              onclick="botonCalculoDeTrianguloPerimetro()"
+            >
+              Calcular Perimetro
+            </button>
+            <p id="respuestaTriangulo"></p>
+          </div>
+        </div>
+        <div class="card" id="cuadrado">
+          <!--Cuadrado-->
+          <div class="card__header">
+            <h3>Cuadrado</h3>
+            <div class="card__img-boton">
+              <img src="../img/cuadrado.png" alt="Figura de un cuadrado" />
+              <button
+                type="button"
+                id="botonCambioCuadrado"
+                onclick="botonCambianteCuadrado()"
+              >
+                Area
+              </button>
+            </div>
+          </div>
+          <div class="card__container-inputs">
+            <label for="input1Cuadrado">lado 1</label>
+            <input type="number" id="input1Cuadrado" />
+          </div>
+          <div class="card__container-respuesta">
+            <button
+              type="button"
+              id="calcularCuadrado"
+              onclick="botonCalculoDeCuadradoPerimetro()"
+            >
+              Calcular Perimetro
+            </button>
+            <p id="respuestaCuadrado"></p>
+          </div>
+        </div>
+        <div class="card" id="rectangulo">
+          <!--Rectangulo-->
+          <div class="card__header">
+            <h3>Rectangulo</h3>
+            <div class="card__img-boton">
+              <img src="../img/rectangulo.png" alt="Figura de un rectangulo" />
+              <button
+                type="button"
+                id="botonCambioRectangulo"
+                onclick="botonCambianteRectangulo()"
+              >
+                Area
+              </button>
+            </div>
+          </div>
+          <div class="card__container-inputs">
+            <label for="input1Rectangulo">Base</label>
+            <input type="number" id="input1Rectangulo" />
+            <label for="input2Rectangulo">Altura</label>
+            <input type="number" id="input2Rectangulo" />
+          </div>
+          <div class="card__container-respuesta">
+            <button
+              type="button"
+              id="calcularRectangulo"
+              onclick="botonCalculoDeRectanguloPerimetro()"
+            >
+              Calcular Perimetro
+            </button>
+            <p id="respuestaRectangulo"></p>
+          </div>
+        </div>
+        <div class="card" id="rombo">
+          <!--Rombo-->
+          <div class="card__header">
+            <h3>Rombo</h3>
+            <div class="card__img-boton">
+              <img src="../img/rombo.png" alt="Figura de un rombo" />
+              <button
+                type="button"
+                id="botonCambioRombo"
+                onclick="botonCambianteRombo()"
+              >
+                Area
+              </button>
+            </div>
+          </div>
+          <div class="card__container-inputs">
+            <label for="input1Rombo">lado 1</label>
+            <input type="number" id="input1Rombo" />
+          </div>
+          <div class="card__container-respuesta">
+            <button
+              type="button"
+              id="calcularRombo"
+              onclick="botonCalculoDeRomboPerimetro()"
+            >
+              Calcular Perimetro
+            </button>
+            <p id="respuestaRombo"></p>
+          </div>
+        </div>
+        <div class="card" id="romboide">
+          <!--Romboide-->
+          <div class="card__header">
+            <h3>Romboide</h3>
+            <div class="card__img-boton">
+              <img src="../img/romboide.png" alt="Figura de un romboide" />
+              <button
+                type="button"
+                id="botonCambioRomboide"
+                onclick="botonCambianteRomboide()"
+              >
+                Area
+              </button>
+            </div>
+          </div>
+          <div class="card__container-inputs">
+            <label for="input1Romboide">Base</label>
+            <input type="number" id="input1Romboide" />
+            <label for="input2Romboide">Altura</label>
+            <input type="number" id="input2Romboide" />
+          </div>
+          <div class="card__container-respuesta">
+            <button
+              type="button"
+              id="calcularRomboide"
+              onclick="botonCalculoDeRomboidePerimetro()"
+            >
+              Calcular Perimetro
+            </button>
+            <p id="respuestaRomboide"></p>
+          </div>
+        </div>
+        <div class="card" id="trapecio">
+          <!--Trapecio-->
+          <div class="card__header">
+            <h3>Trapecio</h3>
+            <div class="card__img-boton">
+              <img src="../img/trapecio.png" alt="Figura de un trapecio" />
+              <button
+                type="button"
+                id="botonCambioTrapecio"
+                onclick="botonCambianteTrapecio()"
+              >
+                Area
+              </button>
+            </div>
+          </div>
+          <div class="card__container-inputs">
+            <label for="input1Trapecio">Lado 1</label>
+            <input type="number" id="input1Trapecio" />
+            <label for="input2Trapecio">Lado 2</label>
+            <input type="number" id="input2Trapecio" />
+            <label for="input3Trapecio">Lado 3</label>
+            <input type="number" id="input3Trapecio" />
+            <label for="input4Trapecio">Lado 4</label>
+            <input type="number" id="input4Trapecio" />
+          </div>
+          <div class="card__container-respuesta">
+            <button
+              type="button"
+              id="calcularTrapecio"
+              onclick="botonCalculoDeTrapecioPerimetro()"
+            >
+              Calcular Perimetro
+            </button>
+            <p id="respuestaTrapecio"></p>
+          </div>
+        </div>
+        <div class="card" id="pentagono">
+          <!--Pentagono-->
+          <div class="card__header">
+            <h3>Pentagono</h3>
+            <div class="card__img-boton">
+              <img src="../img/pentagono.png" alt="Figura de un pentagono" />
+              <button
+                type="button"
+                id="botonCambioPentagono"
+                onclick="botonCambiantePentagono()"
+              >
+                Area
+              </button>
+            </div>
+          </div>
+          <div class="card__container-inputs">
+            <label for="input1Pentagono">Base</label>
+            <input type="number" id="input1Pentagono" />
+          </div>
+          <div class="card__container-respuesta">
+            <button
+              type="button"
+              id="calcularPentagono"
+              onclick="botonCalculoDePentagonoPerimetro()"
+            >
+              Calcular Perimetro
+            </button>
+            <p id="respuestaPentagono"></p>
+          </div>
+        </div>
+        <div class="card" id="circulo">
+          <!--Circulo-->
+          <div class="card__header">
+            <h3>Circulo</h3>
+            <div class="card__img-boton">
+              <img src="../img/circulo.png" alt="Figura de un circulo" />
+              <button
+                type="button"
+                id="botonCambioCirculo"
+                onclick="botonCambianteCirculo()"
+              >
+                Area
+              </button>
+            </div>
+          </div>
+          <div class="card__container-inputs">
+            <label for="input1Circulo">Diametro</label>
+            <input type="number" id="input1Circulo" />
+          </div>
+          <div class="card__container-respuesta">
+            <button
+              type="button"
+              id="calcularCirculo"
+              onclick="botonCalculoDeCirculoPerimetro()"
+            >
+              Calcular Perimetro
+            </button>
+            <p id="respuestaCirculo"></p>
+          </div>
+        </div>
+      </section>
     </main>
     <footer></footer>
   </body>
