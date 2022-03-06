@@ -1,10 +1,29 @@
 main {
-  height: 170vh;
-  background-color: #03012C;
+  height: auto;
+  background-color: #03012c;
 }
 
 button {
   border-radius: 20px;
+  border: none;
+}
+
+button:hover {
+  background: #afafaf;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+button:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+  background: #8d8d8d;
+  -webkit-transition: 0.01s;
+  transition: 0.01s;
+}
+
+.card--circulo {
+  margin-bottom: 23px;
 }
 
 * {
@@ -25,8 +44,13 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #EA638C;
+  background-color: #ea638c;
   color: #fff;
+}
+
+.container-title h1 {
+  font-size: 29px;
+  text-align: center;
 }
 
 .card-container {
@@ -41,7 +65,7 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #B33C86;
+  background-color: #b33c86;
   color: #fff;
   height: 500px;
   width: 280px;
@@ -121,6 +145,11 @@ button {
   height: 25px;
   width: 80%;
   margin: auto;
+}
+
+.card-container .card .card__container-inputs input::-webkit-inner-spin-button,
+.card-container .card .card__container-inputs input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }
 
 .card-container .card .card__container-respuesta {
