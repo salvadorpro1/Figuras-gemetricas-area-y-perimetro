@@ -53,6 +53,7 @@ let calcularPerimetroTriangulo = (
   trianguloLado3
 ) => {
   let respuesta = document.getElementById("respuestaTriangulo");
+  let imagenAnimacion = document.getElementsByClassName("card")[0].children[0].children[1].children[0];
   let perimetroTriangulo = trianguloLado1 + trianguloLado2 + trianguloLado3;
   if (trianguloLado1 < 0 || trianguloLado2 < 0 || trianguloLado3 < 0) {
     respuesta.innerText = 0;
@@ -63,9 +64,12 @@ let calcularPerimetroTriangulo = (
   } else {
     respuesta.innerText = perimetroTriangulo.toFixed(1);
   }
+  imagenAnimacion.style.transform = "rotate(360deg)";
+  imagenAnimacion.style.transition = "1s"
 };
 
 let calcularAreaTriangulo = (trianguloBase, trianguloAltura) => {
+  let imagenAnimacion = document.getElementsByClassName("card")[0].children[0].children[1].children[0];
   let respuesta = document.getElementById("respuestaTriangulo");
   let areaTriangulo = (trianguloBase * trianguloAltura) / 2;
   if (trianguloBase < 0 || trianguloAltura < 0) {
@@ -77,6 +81,8 @@ let calcularAreaTriangulo = (trianguloBase, trianguloAltura) => {
   } else {
     respuesta.innerText = areaTriangulo.toFixed(1);
   }
+  imagenAnimacion.style.transform = "rotate(360deg)";
+  imagenAnimacion.style.transition = "1s"
 };
 let botonCalculoDeTrianguloPerimetro = () => {
   lado1 = parseFloat(document.getElementById("input1Triangulo").value);
@@ -94,8 +100,8 @@ let botonCalculoDeTrianguloArea = () => {
 //Cuadrado
 
 let botonCambianteCuadrado = () => {
-  cuadrado = document.getElementById("cuadrado");
-  botonCambioCuadrado = document.getElementById("botonCambioCuadrado");
+  let cuadrado = document.getElementById("cuadrado");
+  let botonCambioCuadrado = document.getElementById("botonCambioCuadrado");
   if (botonCambioCuadrado.innerText == "Area") {
     cuadrado.innerHTML = `
     <div class="card__header">
@@ -136,6 +142,7 @@ let botonCambianteCuadrado = () => {
 };
 
 let calcularPerimetroCuadrado = (cuadradoLado) => {
+  let imagenAnimacion = document.getElementsByClassName("card")[1].children[0].children[1].children[0];
   let respuesta = document.getElementById("respuestaCuadrado");
   let perimetroCuadrado = cuadradoLado * 4;
   if (cuadradoLado < 0) {
@@ -147,9 +154,12 @@ let calcularPerimetroCuadrado = (cuadradoLado) => {
   } else {
     respuesta.innerText = 0;
   }
+  imagenAnimacion.style.transform = "rotate(360deg)";
+  imagenAnimacion.style.transition = "1s"
 };
 
 let calcularAreaCuadrado = (cuadradoLado) => {
+  let imagenAnimacion = document.getElementsByClassName("card")[1].children[0].children[1].children[0];
   let respuesta = document.getElementById("respuestaCuadrado");
   let areaCuadrado = cuadradoLado ** 2;
   if (cuadradoLado < 0) {
@@ -161,6 +171,8 @@ let calcularAreaCuadrado = (cuadradoLado) => {
   } else {
     respuesta.innerText = 0;
   }
+  imagenAnimacion.style.transform = "rotate(360deg)";
+  imagenAnimacion.style.transition = "1s"
 };
 
 botonCalculoDeCuadradoPerimetro = () => {
@@ -222,6 +234,7 @@ let botonCambianteRectangulo = () => {
 };
 
 let calcularPerimetroRectangulo = (rectanguloBase, rectanguloAltura) => {
+  let imagenAnimacion = document.getElementsByClassName("card")[2].children[0].children[1].children[0];
   let respuesta = document.getElementById("respuestaRectangulo");
   let perimetroRectangulo = rectanguloBase * 2 + rectanguloAltura * 2;
   if (rectanguloBase < 0 || rectanguloAltura < 0) {
@@ -235,9 +248,12 @@ let calcularPerimetroRectangulo = (rectanguloBase, rectanguloAltura) => {
   } else {
     respuesta.innerText = 0;
   }
+  imagenAnimacion.style.transform = "rotate(360deg)";
+  imagenAnimacion.style.transition = "1s"
 };
 
 let calcularAreaRectangulo = (rectanguloBase, rectanguloAltura) => {
+  let imagenAnimacion = document.getElementsByClassName("card")[2].children[0].children[1].children[0];
   let respuesta = document.getElementById("respuestaRectangulo");
   let areaRectangulo = rectanguloBase * rectanguloAltura;
   if (rectanguloBase < 0 || rectanguloAltura < 0) {
@@ -249,6 +265,8 @@ let calcularAreaRectangulo = (rectanguloBase, rectanguloAltura) => {
   } else {
     respuesta.innerText = 0;
   }
+  imagenAnimacion.style.transform = "rotate(360deg)";
+  imagenAnimacion.style.transition = "1s"
 };
 
 let botonCalculoDeRectanguloPerimetro = () => {
@@ -310,6 +328,7 @@ botonCambianteRombo = () => {
 };
 
 let calcularPerimetroRombo = (romboLado) => {
+  let imagenAnimacion = document.getElementsByClassName("card")[3].children[0].children[1].children[0];
   let respuesta = document.getElementById("respuestaRombo");
   let perimetroRombo = romboLado * 4;
   if (romboLado < 0) {
@@ -321,9 +340,12 @@ let calcularPerimetroRombo = (romboLado) => {
   } else {
     respuesta.innerText = 0;
   }
+  imagenAnimacion.style.transform = "rotate(360deg)";
+  imagenAnimacion.style.transition = "1s"
 };
 
 let calcularAreaRombo = (romboDiagonalMenor, romboDiagonalMayor) => {
+  let imagenAnimacion = document.getElementsByClassName("card")[3].children[0].children[1].children[0];
   let respuesta = document.getElementById("respuestaRombo");
   let areaRombo = (romboDiagonalMayor * romboDiagonalMenor) / 2;
   if (romboDiagonalMenor < 0 || romboDiagonalMayor < 0) {
@@ -335,6 +357,8 @@ let calcularAreaRombo = (romboDiagonalMenor, romboDiagonalMayor) => {
   } else {
     respuesta.innerText = 0;
   }
+  imagenAnimacion.style.transform = "rotate(360deg)";
+  imagenAnimacion.style.transition = "1s"
 };
 
 let botonCalculoDeRomboPerimetro = () => {
@@ -397,6 +421,7 @@ let botonCambianteRomboide = () => {
 };
 
 let calcularPerimetroRomboide = (romboideBase, romboideAltura) => {
+  let imagenAnimacion = document.getElementsByClassName("card")[4].children[0].children[1].children[0];
   let respuesta = document.getElementById("respuestaRomboide");
   let perimetroRomboide = romboideBase * 2 + romboideAltura * 2;
   if (romboideBase < 0 || romboideAltura < 0) {
@@ -410,9 +435,12 @@ let calcularPerimetroRomboide = (romboideBase, romboideAltura) => {
   } else {
     respuesta.innerText = 0;
   }
+  imagenAnimacion.style.transform = "rotate(360deg)";
+  imagenAnimacion.style.transition = "1s"
 };
 
 let calcularAreaRomboide = (romboideBase, romboideAltura) => {
+  let imagenAnimacion = document.getElementsByClassName("card")[4].children[0].children[1].children[0];
   let respuesta = document.getElementById("respuestaRomboide");
   let areaRomboide = romboideBase * romboideAltura;
   if (romboideBase < 0 || romboideAltura < 0) {
@@ -424,6 +452,8 @@ let calcularAreaRomboide = (romboideBase, romboideAltura) => {
   } else {
     respuesta.innerText = 0;
   }
+  imagenAnimacion.style.transform = "rotate(360deg)";
+  imagenAnimacion.style.transition = "1s"
 };
 
 let botonCalculoDeRomboidePerimetro = () => {
@@ -498,6 +528,7 @@ let calcularPerimetroTrapecio = (
   TrapecioLado3,
   TrapecioLado4
 ) => {
+  let imagenAnimacion = document.getElementsByClassName("card")[5].children[0].children[1].children[0];
   let respuesta = document.getElementById("respuestaTrapecio");
   let perimetroTrapecio =
     TrapecioLado1 + TrapecioLado2 + TrapecioLado3 + TrapecioLado4;
@@ -515,6 +546,8 @@ let calcularPerimetroTrapecio = (
   } else {
     respuesta.innerText = perimetroTrapecio.toFixed(1);
   }
+  imagenAnimacion.style.transform = "rotate(360deg)";
+  imagenAnimacion.style.transition = "1s"
 };
 
 let calcularAreaTrapecio = (
@@ -522,6 +555,7 @@ let calcularAreaTrapecio = (
   trapecioBaseMayor,
   trapecioAltura
 ) => {
+  let imagenAnimacion = document.getElementsByClassName("card")[5].children[0].children[1].children[0];
   let respuesta = document.getElementById("respuestaTrapecio");
   let areaTrapecio =
     (trapecioAltura * (trapecioBaseMenor + trapecioBaseMayor)) / 2;
@@ -534,6 +568,8 @@ let calcularAreaTrapecio = (
   } else {
     respuesta.innerText = areaTrapecio.toFixed(1);
   }
+  imagenAnimacion.style.transform = "rotate(360deg)";
+  imagenAnimacion.style.transition = "1s"
 };
 
 let botonCalculoDeTrapecioPerimetro = () => {
@@ -598,6 +634,7 @@ let botonCambiantePentagono = () => {
 };
 
 let calcularPerimetroPentagono = (pentagonoBase) => {
+  let imagenAnimacion = document.getElementsByClassName("card")[6].children[0].children[1].children[0];
   let perimetroPentagono = pentagonoBase * 5;
   let resultado = document.getElementById("respuestaPentagono");
   if (pentagonoBase < 0) {
@@ -609,9 +646,12 @@ let calcularPerimetroPentagono = (pentagonoBase) => {
   } else {
     resultado.innerText = 0;
   }
+  imagenAnimacion.style.transform = "rotate(360deg)";
+  imagenAnimacion.style.transition = "1s"
 };
 
 let calcularAreaPentagono = (pentagonoApotema, pentagonoBase) => {
+  let imagenAnimacion = document.getElementsByClassName("card")[6].children[0].children[1].children[0];
   let perimetroPentagono = pentagonoBase * 5;
   let areaPentagono = (perimetroPentagono * pentagonoApotema) / 2;
   let resultado = document.getElementById("respuestaPentagono");
@@ -624,6 +664,8 @@ let calcularAreaPentagono = (pentagonoApotema, pentagonoBase) => {
   } else {
     resultado.innerText = 0;
   }
+  imagenAnimacion.style.transform = "rotate(360deg)";
+  imagenAnimacion.style.transition = "1s"
 };
 
 let botonCalculoDePentagonoPerimetro = () => {
@@ -682,6 +724,7 @@ let botonCambianteCirculo = () => {
 };
 
 let calcularPerimetroCirculo = (circuloDiametro) => {
+  let imagenAnimacion = document.getElementsByClassName("card")[7].children[0].children[1].children[0];
   let respuesta = document.getElementById("respuestaCirculo");
   let circuloPI = Math.PI;
   let perimetroCirculo = circuloDiametro * circuloPI;
@@ -695,9 +738,12 @@ let calcularPerimetroCirculo = (circuloDiametro) => {
     respuesta.innerText = 0;
     console.log(perimetroCirculo);
   }
+  imagenAnimacion.style.transform = "rotate(360deg)";
+  imagenAnimacion.style.transition = "1s"
 };
 
 let calcularAreaCirculo = (circuloRadio) => {
+  let imagenAnimacion = document.getElementsByClassName("card")[7].children[0].children[1].children[0];
   let respuesta = document.getElementById("respuestaCirculo");
   let circuloPI = Math.PI;
   let areaCirculo = circuloPI * circuloRadio ** 2;
@@ -708,6 +754,8 @@ let calcularAreaCirculo = (circuloRadio) => {
   } else {
     respuesta.innerText = 0;
   }
+  imagenAnimacion.style.transform = "rotate(360deg)";
+  imagenAnimacion.style.transition = "2s"
 };
 
 let botonCalculoDeCirculoPerimetro = () => {
