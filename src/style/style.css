@@ -1,6 +1,6 @@
 main {
-  background-color: #010230;
   height: 170vh;
+  background-color: #03012C;
 }
 
 button {
@@ -25,7 +25,8 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #dd501a;
+  background-color: #EA638C;
+  color: #fff;
 }
 
 .card-container {
@@ -40,6 +41,8 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: #B33C86;
+  color: #fff;
   height: 500px;
   width: 280px;
   -webkit-box-align: center;
@@ -49,13 +52,9 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: -webkit-gradient(linear, left top, right top, from(#15274d), to(#00aaad));
-  background: linear-gradient(90deg, #15274d 0%, #00aaad 100%);
-  border: 2px solid #0e0e0e;
   border-radius: 20px;
   margin-top: 20px;
   position: relative;
-  color: #0e0e0e;
 }
 
 .card-container .card .card__header {

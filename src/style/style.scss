@@ -1,10 +1,10 @@
-$color-naranja: #dd501a; 
-$color-negro: #0e0e0e ;
-$color-blanco: linear-gradient(90deg, rgba(21,39,77,1) 0%, rgba(0,170,173,1) 100%);
-
+$color-principal:#03012C;
+$color-secundario:#B33C86;
+$color-terciario:#fff;
+$color-h:#EA638C;
 main{
-  background-color: #010230;
   height: 170vh;
+  background-color: $color-principal;
 }
 
 button{
@@ -22,7 +22,8 @@ button{
   height: 80px;
   align-items: center;
   justify-content: center;
-  background-color: $color-naranja;
+  background-color: $color-h;
+  color: $color-terciario;
 }
 
 .card-container{
@@ -32,16 +33,15 @@ button{
 
   .card{
     display: flex;
+    background-color: $color-secundario;
+    color: $color-terciario;
     height: 500px;
     width: 280px;
     align-items: center;
     flex-direction: column;
-    background: $color-blanco;
-    border: 2px solid $color-negro;
     border-radius: 20px;
     margin-top: 20px;
     position: relative;
-    color: $color-negro;
     .card__header{
       display: flex;
       flex-direction: column;
