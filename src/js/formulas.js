@@ -54,20 +54,24 @@ let calcularPerimetroTriangulo = (
 ) => {
   let respuesta = document.getElementById("respuestaTriangulo");
   let perimetroTriangulo = trianguloLado1 + trianguloLado2 + trianguloLado3;
-  if(isNaN(perimetroTriangulo)){
-    respuesta.innerText = 0
-  }else{
+  if (isNaN(perimetroTriangulo)) {
+    respuesta.innerText = 0;
+  } else if (Number.isInteger(perimetroTriangulo)) {
     respuesta.innerText = perimetroTriangulo;
+  } else {
+    respuesta.innerText = perimetroTriangulo.toFixed(1);
   }
 };
 
 let calcularAreaTriangulo = (trianguloBase, trianguloAltura) => {
   let respuesta = document.getElementById("respuestaTriangulo");
   let areaTriangulo = (trianguloBase * trianguloAltura) / 2;
-  if(isNaN(areaTriangulo)){
-    respuesta.innerText = 0
-  }else{
+  if (isNaN(areaTriangulo)) {
+    respuesta.innerText = 0;
+  } else if (Number.isInteger(areaTriangulo)) {
     respuesta.innerText = areaTriangulo;
+  } else {
+    respuesta.innerText = areaTriangulo.toFixed(1);
   }
 };
 let botonCalculoDeTrianguloPerimetro = () => {
@@ -130,13 +134,25 @@ let botonCambianteCuadrado = () => {
 let calcularPerimetroCuadrado = (cuadradoLado) => {
   let respuesta = document.getElementById("respuestaCuadrado");
   let perimetroCuadrado = cuadradoLado * 4;
-  respuesta.innerText = perimetroCuadrado;
+  if (Number.isInteger(perimetroCuadrado)) {
+    respuesta.innerText = perimetroCuadrado;
+  } else if (Number.isInteger(perimetroCuadrado) == false) {
+    respuesta.innerText = perimetroCuadrado.toFixed(1);
+  } else {
+    respuesta.innerText = 0;
+  }
 };
 
 let calcularAreaCuadrado = (cuadradoLado) => {
   let respuesta = document.getElementById("respuestaCuadrado");
   let areaCuadrado = cuadradoLado ** 2;
-  respuesta.innerText = areaCuadrado;
+  if (Number.isInteger(areaCuadrado)) {
+    respuesta.innerText = areaCuadrado;
+  } else if (Number.isInteger(areaCuadrado) == false) {
+    respuesta.innerText = areaCuadrado.toFixed(1);
+  } else {
+    respuesta.innerText = 0;
+  }
 };
 
 botonCalculoDeCuadradoPerimetro = () => {
@@ -200,13 +216,27 @@ let botonCambianteRectangulo = () => {
 let calcularPerimetroRectangulo = (rectanguloBase, rectanguloAltura) => {
   let respuesta = document.getElementById("respuestaRectangulo");
   let perimetroRectangulo = rectanguloBase * 2 + rectanguloAltura * 2;
-  respuesta.innerText = perimetroRectangulo;
+  if (rectanguloBase == "" || rectanguloAltura == "") {
+    respuesta.innerText = 0;
+  } else if (Number.isInteger(perimetroRectangulo)) {
+    respuesta.innerText = perimetroRectangulo;
+  } else if (Number.isInteger(perimetroRectangulo) == false) {
+    respuesta.innerText = perimetroRectangulo.toFixed(1);
+  } else {
+    respuesta.innerText = 0;
+  }
 };
 
 let calcularAreaRectangulo = (rectanguloBase, rectanguloAltura) => {
   let respuesta = document.getElementById("respuestaRectangulo");
   let areaRectangulo = rectanguloBase * rectanguloAltura;
-  respuesta.innerText = areaRectangulo;
+  if (Number.isInteger(areaRectangulo)) {
+    respuesta.innerText = areaRectangulo;
+  } else if (Number.isInteger(areaRectangulo) == false) {
+    respuesta.innerText = areaRectangulo.toFixed(1);
+  } else {
+    respuesta.innerText = 0;
+  }
 };
 
 let botonCalculoDeRectanguloPerimetro = () => {
@@ -270,13 +300,25 @@ botonCambianteRombo = () => {
 let calcularPerimetroRombo = (romboLado) => {
   let respuesta = document.getElementById("respuestaRombo");
   let perimetroRombo = romboLado * 4;
-  respuesta.innerText = perimetroRombo;
+  if (Number.isInteger(perimetroRombo)) {
+    respuesta.innerText = perimetroRombo;
+  } else if (Number.isInteger(perimetroRombo) == false) {
+    respuesta.innerText = perimetroRombo.toFixed(1);
+  } else {
+    respuesta.innerText = 0;
+  }
 };
 
 let calcularAreaRombo = (romboDiagonalMenor, romboDiagonalMayor) => {
   let respuesta = document.getElementById("respuestaRombo");
   let areaRombo = (romboDiagonalMayor * romboDiagonalMenor) / 2;
-  respuesta.innerText = areaRombo;
+  if (Number.isInteger(areaRombo)) {
+    respuesta.innerText = areaRombo;
+  } else if (Number.isInteger(areaRombo) == false) {
+    respuesta.innerText = areaRombo.toFixed(1);
+  } else {
+    respuesta.innerText = 0;
+  }
 };
 
 let botonCalculoDeRomboPerimetro = () => {
@@ -341,13 +383,28 @@ let botonCambianteRomboide = () => {
 let calcularPerimetroRomboide = (romboideBase, romboideAltura) => {
   let respuesta = document.getElementById("respuestaRomboide");
   let perimetroRomboide = romboideBase * 2 + romboideAltura * 2;
-  respuesta.innerText = perimetroRomboide;
+  if (romboideBase == "" || romboideAltura == "") {
+    respuesta.innerText = 0;
+  }
+  else if (Number.isInteger(perimetroRomboide)) {
+    respuesta.innerText = perimetroRomboide;
+  } else if (Number.isInteger(perimetroRomboide) == false) {
+    respuesta.innerText = perimetroRomboide.toFixed(1);
+  } else {
+    respuesta.innerText = 0;
+  }
 };
 
 let calcularAreaRomboide = (romboideBase, romboideAltura) => {
   let respuesta = document.getElementById("respuestaRomboide");
   let areaRomboide = romboideBase * romboideAltura;
-  respuesta.innerText = areaRomboide;
+  if (Number.isInteger(areaRomboide)) {
+    respuesta.innerText = areaRomboide;
+  } else if (Number.isInteger(areaRomboide) == false) {
+    respuesta.innerText = areaRomboide.toFixed(1);
+  } else {
+    respuesta.innerText = 0;
+  }
 };
 
 let botonCalculoDeRomboidePerimetro = () => {
@@ -425,10 +482,12 @@ let calcularPerimetroTrapecio = (
   let respuesta = document.getElementById("respuestaTrapecio");
   let perimetroTrapecio =
     TrapecioLado1 + TrapecioLado2 + TrapecioLado3 + TrapecioLado4;
-    if(isNaN(perimetroTrapecio)){
-      respuesta.innerText = 0
-    }else{
+    if (isNaN(perimetroTrapecio)) {
+      respuesta.innerText = 0;
+    } else if (Number.isInteger(perimetroTrapecio)) {
       respuesta.innerText = perimetroTrapecio;
+    } else {
+      respuesta.innerText = perimetroTrapecio.toFixed(1);
     }
 };
 
@@ -440,11 +499,13 @@ let calcularAreaTrapecio = (
   let respuesta = document.getElementById("respuestaTrapecio");
   let areaTrapecio =
     (trapecioAltura * (trapecioBaseMenor + trapecioBaseMayor)) / 2;
-    if(isNaN(areaTrapecio)){
-      respuesta.innerText = 0
-    }else{
-      respuesta.innerText = areaTrapecio;
-    }
+  if (isNaN(areaTrapecio)) {
+    respuesta.innerText = 0;
+  } else if (Number.isInteger(areaTrapecio)) {
+    respuesta.innerText = areaTrapecio;
+  } else {
+    respuesta.innerText = areaTrapecio.toFixed(1);
+  }
 };
 
 let botonCalculoDeTrapecioPerimetro = () => {
@@ -511,15 +572,26 @@ let botonCambiantePentagono = () => {
 let calcularPerimetroPentagono = (pentagonoBase) => {
   let perimetroPentagono = pentagonoBase * 5;
   let resultado = document.getElementById("respuestaPentagono");
-  resultado.innerText = perimetroPentagono;
+  if (Number.isInteger(perimetroPentagono)) {
+    resultado.innerText = perimetroPentagono;
+  } else if (Number.isInteger(perimetroPentagono) == false) {
+    resultado.innerText = perimetroPentagono.toFixed(1);
+  } else {
+    resultado.innerText = 0;
+  }
 };
 
 let calcularAreaPentagono = (pentagonoApotema, pentagonoBase) => {
   let perimetroPentagono = pentagonoBase * 5;
   let areaPentagono = (perimetroPentagono * pentagonoApotema) / 2;
   let resultado = document.getElementById("respuestaPentagono");
-  resultado.innerText = areaPentagono;
-};
+  if (Number.isInteger(areaPentagono)) {
+    resultado.innerText = areaPentagono;
+  } else if (Number.isInteger(areaPentagono) == false) {
+    resultado.innerText = areaPentagono.toFixed(1);
+  } else {
+    resultado.innerText = 0;
+  }};
 
 let botonCalculoDePentagonoPerimetro = () => {
   let base = document.getElementById("input1Pentagono").value;
@@ -580,15 +652,26 @@ let calcularPerimetroCirculo = (circuloDiametro) => {
   let respuesta = document.getElementById("respuestaCirculo");
   let circuloPI = Math.PI;
   let perimetroCirculo = circuloDiametro * circuloPI;
-  respuesta.innerText = perimetroCirculo.toFixed(1);
+  if (Number.isInteger(perimetroCirculo)) {
+    respuesta.innerText = perimetroCirculo;
+  } else if (Number.isInteger(perimetroCirculo) == false) {
+    respuesta.innerText = perimetroCirculo.toFixed(1);
+  } else {
+    respuesta.innerText = 0;
+  }
 };
 
 let calcularAreaCirculo = (circuloRadio) => {
   let respuesta = document.getElementById("respuestaCirculo");
   let circuloPI = Math.PI;
   let areaCirculo = circuloPI * circuloRadio ** 2;
-  respuesta.innerText = areaCirculo.toFixed(1);
-};
+  if (Number.isInteger(areaCirculo)) {
+    respuesta.innerText = areaCirculo;
+  } else if (Number.isInteger(areaCirculo) == false) {
+    respuesta.innerText = areaCirculo.toFixed(1);
+  } else {
+    respuesta.innerText = 0;
+  }};
 
 let botonCalculoDeCirculoPerimetro = () => {
   let diametro = document.getElementById("input1Circulo").value;
