@@ -2,6 +2,8 @@ $color-principal: #03012c;
 $color-secundario: #b33c86;
 $color-terciario: #fff;
 $color-h: #ea638c;
+$color-b: #190e4f ;
+
 main {
   height: auto;
   background-color: $color-principal;
@@ -10,11 +12,14 @@ main {
 button {
   border-radius: 20px;
   border: none;
-  &:hover{
-    background: rgb(175, 175, 175);
+  transition: 2s;
+  background-color: $color-b;
+  color: $color-terciario;
+  &:hover {
+    background: rgb(95, 95, 95);
     transition: 0.5s;
   }
-  &:active{
+  &:active {
     transform: scale(0.98);
     background: rgb(141, 141, 141);
     transition: 0.01s;
