@@ -8,7 +8,7 @@ let botonCambianteTriangulo = () => {
     <div class="card__header">
     <h3>Triángulo</h3>
     <div class="card__img-boton">
-      <img src="../img/triangulo.png" alt="Figura de un triangulo" />
+      <img src="./src/img/triangulo.png" alt="Figura de un triangulo" />
       <button type="button" id="botonCambioTriangulo" onclick="botonCambianteTriangulo()">Perímetro</button>
     </div>
   </div>
@@ -27,7 +27,7 @@ let botonCambianteTriangulo = () => {
     <div class="card__header">
     <h3>Triángulo</h3>
     <div class="card__img-boton">
-    <img src="../img/triangulo.png" alt="Figura de un triangulo" />
+    <img src="./src/img/triangulo.png" alt="Figura de un triangulo" />
       <button type="button" id="botonCambioTriangulo" onclick="botonCambianteTriangulo()">Área</button>
     </div>
   </div>
@@ -111,7 +111,7 @@ let botonCambianteCuadrado = () => {
     <div class="card__header">
     <h3>Cuadrado</h3>
     <div class="card__img-boton">
-    <img src="../img/cuadrado.png" alt="Figura de un cuadrado" />
+    <img src="./src/img/cuadrado.png" alt="Figura de un cuadrado" />
       <button type="button" id="botonCambioCuadrado" onclick="botonCambianteCuadrado()">Perímetro</button>
     </div>
   </div>
@@ -129,7 +129,7 @@ let botonCambianteCuadrado = () => {
     <div class="card__header">
       <h3>Cuadrado</h3>
       <div class="card__img-boton">
-      <img src="../img/cuadrado.png" alt="Figura de un cuadrado" />
+      <img src="./src/img/cuadrado.png" alt="Figura de un cuadrado" />
         <button type="button" id="botonCambioCuadrado" onclick="botonCambianteCuadrado()">Área</button>
       </div>
     </div>
@@ -203,7 +203,7 @@ let botonCambianteRectangulo = () => {
 <div class="card__header">
 <h3>Rectángulo </h3>
 <div class="card__img-boton">
-<img src="../img/rectangulo.png" alt="Figura de un Rectángulo " />
+<img src="./src/img/rectangulo.png" alt="Figura de un Rectángulo " />
 <button type="button" id="botonCambioRectangulo" onclick="botonCambianteRectangulo()">Perímetro</button>
 </div>
 </div>
@@ -223,7 +223,7 @@ let botonCambianteRectangulo = () => {
 <div class="card__header">
 <h3>Rectángulo </h3>
 <div class="card__img-boton">
-<img src="../img/rectangulo.png" alt="Figura de un Rectángulo " />
+<img src="./src/img/rectangulo.png" alt="Figura de un Rectángulo " />
 <button type="button" id="botonCambioRectangulo" onclick="botonCambianteRectangulo()">Área</button>
 </div>
 </div>
@@ -303,7 +303,7 @@ botonCambianteRombo = () => {
   <div class="card__header">
   <h3>Rombo</h3>
   <div class="card__img-boton">
-  <img src="../img/rombo.png" alt="Figura de un Rombo" />
+  <img src="./src/img/rombo.png" alt="Figura de un Rombo" />
   <button type="button" id="botonCambioRombo" onclick="botonCambianteRombo()">Perímetro</button>
   </div>
 </div>
@@ -323,7 +323,7 @@ botonCambianteRombo = () => {
   <div class="card__header">
   <h3>Rombo</h3>
   <div class="card__img-boton">
-  <img src="../img/rombo.png" alt="Figura de un Rombo" />
+  <img src="./src/img/rombo.png" alt="Figura de un Rombo" />
   <button type="button" id="botonCambioRombo" onclick="botonCambianteRombo()">Área</button>
   </div>
 </div>
@@ -398,7 +398,7 @@ let botonCambianteRomboide = () => {
   <div class="card__header">
   <h3>Romboide</h3>
   <div class="card__img-boton">
-  <img src="../img/romboide.png" alt="Figura de un romboide" />
+  <img src="./src/img/romboide.png" alt="Figura de un romboide" />
   <button type="button" id="botonCambioRomboide" onclick="botonCambianteRomboide()">Perímetro</button>
   </div>
 </div>
@@ -418,7 +418,7 @@ let botonCambianteRomboide = () => {
   <div class="card__header">
   <h3>Romboide</h3>
   <div class="card__img-boton">
-  <img src="../img/romboide.png" alt="Figura de un romboide" />
+  <img src="./src/img/romboide.png" alt="Figura de un romboide" />
   <button type="button" id="botonCambioRomboide" onclick="botonCambianteRomboide()">Área</button>
   </div>
 </div>
@@ -498,7 +498,7 @@ let botonCambianteTrapecio = () => {
     <div class="card__header">
     <h3>Trapecio</h3>
     <div class="card__img-boton">
-    <img src="../img/trapecio.png" alt="Figura de un trapecio" />
+    <img src="./src/img/trapecio.png" alt="Figura de un trapecio" />
     <button type="button" id="botonCambioTrapecio" onclick="botonCambianteTrapecio()">Perímetro</button>
     </div>
   </div>
@@ -520,7 +520,7 @@ let botonCambianteTrapecio = () => {
     <div class="card__header">
     <h3>Trapecio</h3>
     <div class="card__img-boton">
-    <img src="../img/trapecio.png" alt="Figura de un trapecio" />
+    <img src="./src/img/trapecio.png" alt="Figura de un trapecio" />
     <button type="button" id="botonCambioTrapecio" onclick="botonCambianteTrapecio()">Área</button>
     </div>
   </div>
@@ -621,7 +621,7 @@ let botonCambiantePentagono = () => {
   <div class="card__header">
   <h3>Pentágono</h3>
   <div class="card__img-boton">
-  <img src="../img/pentagono.png" alt="Figura de un pentagono" />
+  <img src="./src/img/pentagono.png" alt="Figura de un pentagono" />
   <button type="button" id="botonCambioPentagono" onclick="botonCambiantePentagono()">Perímetro</button>
   </div>
 </div>
@@ -641,7 +641,7 @@ let botonCambiantePentagono = () => {
   <div class="card__header">
   <h3>Pentágono</h3>
   <div class="card__img-boton">
-  <img src="../img/pentagono.png" alt="Figura de un pentagono" />
+  <img src="./src/img/pentagono.png" alt="Figura de un pentagono" />
   <button type="button" id="botonCambioPentagono" onclick="botonCambiantePentagono()">Área</button>
   </div>
 </div>
@@ -717,7 +717,7 @@ let botonCambianteCirculo = () => {
     <div class="card__header">
     <h3>Circulo</h3>
     <div class="card__img-boton">
-    <img src="../img/circulo.png" alt="Figura de un circulo" />
+    <img src="./src/img/circulo.png" alt="Figura de un circulo" />
     <button type="button" id="botonCambioCirculo" onclick="botonCambianteCirculo()">Perímetro</button>
     </div>
   </div>
@@ -735,7 +735,7 @@ let botonCambianteCirculo = () => {
     <div class="card__header">
     <h3>Circulo</h3>
     <div class="card__img-boton">
-    <img src="../img/circulo.png" alt="Figura de un circulo" />
+    <img src="./src/img/circulo.png" alt="Figura de un circulo" />
     <button type="button" id="botonCambioCirculo" onclick="botonCambianteCirculo()">Área</button>
     </div>
   </div>
