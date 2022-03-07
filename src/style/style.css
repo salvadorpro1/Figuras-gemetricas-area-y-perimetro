@@ -10,6 +10,7 @@ button {
   transition: 2s;
   background-color: #190e4f;
   color: #fff;
+  font-family: "Armata", sans-serif;
 }
 
 button:hover {
@@ -50,10 +51,11 @@ button:active {
           justify-content: center;
   background-color: #ea638c;
   color: #fff;
+  font-family: "Changa", sans-serif;
 }
 
 .container-title h1 {
-  font-size: 29px;
+  font-size: 26px;
   text-align: center;
 }
 
@@ -71,7 +73,7 @@ button:active {
   display: flex;
   background-color: #b33c86;
   color: #fff;
-  height: 500px;
+  height: 520px;
   width: 280px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -83,6 +85,7 @@ button:active {
   border-radius: 20px;
   margin-top: 20px;
   position: relative;
+  font-family: "Armata", sans-serif;
 }
 
 .card-container .card .card__header {
@@ -99,6 +102,7 @@ button:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: "Changa", sans-serif;
 }
 
 .card-container .card .card__header h3 {
@@ -138,6 +142,7 @@ button:active {
       align-content: center;
   margin-top: 20px;
   width: 100%;
+  font-size: 14px;
 }
 
 .card-container .card .card__container-inputs label {

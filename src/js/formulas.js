@@ -19,7 +19,7 @@ let botonCambianteTriangulo = () => {
     <input type="number" id="input2Triangulo" />
   </div>
   <div class="card__container-respuesta">
-    <button type="button" id="calcularTriangulo" onclick="botonCalculoDeTrianguloArea()">Calcular Area</button>
+    <button type="button" id="calcularTriangulo" onclick="botonCalculoDeTrianguloArea()">Calcular Área</button>
     <p id="respuestaTriangulo"></p>
   </div>`;
   } else {
@@ -40,7 +40,7 @@ let botonCambianteTriangulo = () => {
     <input type="number" id="input3Triangulo" />
   </div>
   <div class="card__container-respuesta">
-    <button type="button" id="calcularTriangulo" onclick="botonCalculoDeTrianguloPerimetro()">Calcular Perimetro</button>
+    <button type="button" id="calcularTriangulo" onclick="botonCalculoDeTrianguloPerimetro()">Calcular Perímetro</button>
     <p id="respuestaTriangulo"></p>
   </div>
     `;
@@ -53,7 +53,9 @@ let calcularPerimetroTriangulo = (
   trianguloLado3
 ) => {
   let respuesta = document.getElementById("respuestaTriangulo");
-  let imagenAnimacion = document.getElementsByClassName("card")[0].children[0].children[1].children[0];
+  let imagenAnimacion =
+    document.getElementsByClassName("card")[0].children[0].children[1]
+      .children[0];
   let perimetroTriangulo = trianguloLado1 + trianguloLado2 + trianguloLado3;
   if (trianguloLado1 < 0 || trianguloLado2 < 0 || trianguloLado3 < 0) {
     respuesta.innerText = 0;
@@ -65,11 +67,13 @@ let calcularPerimetroTriangulo = (
     respuesta.innerText = perimetroTriangulo.toFixed(1);
   }
   imagenAnimacion.style.transform = "rotate(360deg)";
-  imagenAnimacion.style.transition = "1s"
+  imagenAnimacion.style.transition = "1s";
 };
 
 let calcularAreaTriangulo = (trianguloBase, trianguloAltura) => {
-  let imagenAnimacion = document.getElementsByClassName("card")[0].children[0].children[1].children[0];
+  let imagenAnimacion =
+    document.getElementsByClassName("card")[0].children[0].children[1]
+      .children[0];
   let respuesta = document.getElementById("respuestaTriangulo");
   let areaTriangulo = (trianguloBase * trianguloAltura) / 2;
   if (trianguloBase < 0 || trianguloAltura < 0) {
@@ -82,7 +86,7 @@ let calcularAreaTriangulo = (trianguloBase, trianguloAltura) => {
     respuesta.innerText = areaTriangulo.toFixed(1);
   }
   imagenAnimacion.style.transform = "rotate(360deg)";
-  imagenAnimacion.style.transition = "1s"
+  imagenAnimacion.style.transition = "1s";
 };
 let botonCalculoDeTrianguloPerimetro = () => {
   lado1 = parseFloat(document.getElementById("input1Triangulo").value);
@@ -116,7 +120,7 @@ let botonCambianteCuadrado = () => {
     <input type="number" id="input1Cuadrado" />
   </div>
   <div class="card__container-respuesta">
-    <button type="button" id="calcularCuadrado" onclick="botonCalculoDeCuadradoArea()">Calcular Area</button>
+    <button type="button" id="calcularCuadrado" onclick="botonCalculoDeCuadradoArea()">Calcular Área</button>
     <p id="respuestaCuadrado"></p>
   </div>
     `;
@@ -134,7 +138,7 @@ let botonCambianteCuadrado = () => {
       <input type="number" id="input1Cuadrado" />
     </div>
     <div class="card__container-respuesta">
-      <button type="button" id="calcularCuadrado" onclick="botonCalculoDeCuadradoPerimetro()">Calcular Perimetro</button>
+      <button type="button" id="calcularCuadrado" onclick="botonCalculoDeCuadradoPerimetro()">Calcular Perímetro</button>
       <p id="respuestaCuadrado"></p>
     </div>
     `;
@@ -142,7 +146,9 @@ let botonCambianteCuadrado = () => {
 };
 
 let calcularPerimetroCuadrado = (cuadradoLado) => {
-  let imagenAnimacion = document.getElementsByClassName("card")[1].children[0].children[1].children[0];
+  let imagenAnimacion =
+    document.getElementsByClassName("card")[1].children[0].children[1]
+      .children[0];
   let respuesta = document.getElementById("respuestaCuadrado");
   let perimetroCuadrado = cuadradoLado * 4;
   if (cuadradoLado < 0) {
@@ -155,11 +161,13 @@ let calcularPerimetroCuadrado = (cuadradoLado) => {
     respuesta.innerText = 0;
   }
   imagenAnimacion.style.transform = "rotate(360deg)";
-  imagenAnimacion.style.transition = "1s"
+  imagenAnimacion.style.transition = "1s";
 };
 
 let calcularAreaCuadrado = (cuadradoLado) => {
-  let imagenAnimacion = document.getElementsByClassName("card")[1].children[0].children[1].children[0];
+  let imagenAnimacion =
+    document.getElementsByClassName("card")[1].children[0].children[1]
+      .children[0];
   let respuesta = document.getElementById("respuestaCuadrado");
   let areaCuadrado = cuadradoLado ** 2;
   if (cuadradoLado < 0) {
@@ -172,7 +180,7 @@ let calcularAreaCuadrado = (cuadradoLado) => {
     respuesta.innerText = 0;
   }
   imagenAnimacion.style.transform = "rotate(360deg)";
-  imagenAnimacion.style.transition = "1s"
+  imagenAnimacion.style.transition = "1s";
 };
 
 botonCalculoDeCuadradoPerimetro = () => {
@@ -206,7 +214,7 @@ let botonCambianteRectangulo = () => {
 <input type="number" id="input2Rectangulo" />
 </div>
 <div class="card__container-respuesta">
-<button type="button" id="calcularRectangulo" onclick="botonCalculoDeRectanguloArea()">Calcular Area</button>
+<button type="button" id="calcularRectangulo" onclick="botonCalculoDeRectanguloArea()">Calcular Área</button>
 <p id="respuestaRectangulo"></p>
 </div>
 `;
@@ -226,7 +234,7 @@ let botonCambianteRectangulo = () => {
 <input type="number" id="input2Rectangulo" />
 </div>
 <div class="card__container-respuesta">
-<button type="button" id="calcularRectangulo" onclick="botonCalculoDeRectanguloPerimetro()">Calcular Perimetro</button>
+<button type="button" id="calcularRectangulo" onclick="botonCalculoDeRectanguloPerimetro()">Calcular Perímetro</button>
 <p id="respuestaRectangulo"></p>
 </div>
 `;
@@ -234,7 +242,9 @@ let botonCambianteRectangulo = () => {
 };
 
 let calcularPerimetroRectangulo = (rectanguloBase, rectanguloAltura) => {
-  let imagenAnimacion = document.getElementsByClassName("card")[2].children[0].children[1].children[0];
+  let imagenAnimacion =
+    document.getElementsByClassName("card")[2].children[0].children[1]
+      .children[0];
   let respuesta = document.getElementById("respuestaRectangulo");
   let perimetroRectangulo = rectanguloBase * 2 + rectanguloAltura * 2;
   if (rectanguloBase < 0 || rectanguloAltura < 0) {
@@ -249,11 +259,13 @@ let calcularPerimetroRectangulo = (rectanguloBase, rectanguloAltura) => {
     respuesta.innerText = 0;
   }
   imagenAnimacion.style.transform = "rotate(360deg)";
-  imagenAnimacion.style.transition = "1s"
+  imagenAnimacion.style.transition = "1s";
 };
 
 let calcularAreaRectangulo = (rectanguloBase, rectanguloAltura) => {
-  let imagenAnimacion = document.getElementsByClassName("card")[2].children[0].children[1].children[0];
+  let imagenAnimacion =
+    document.getElementsByClassName("card")[2].children[0].children[1]
+      .children[0];
   let respuesta = document.getElementById("respuestaRectangulo");
   let areaRectangulo = rectanguloBase * rectanguloAltura;
   if (rectanguloBase < 0 || rectanguloAltura < 0) {
@@ -266,7 +278,7 @@ let calcularAreaRectangulo = (rectanguloBase, rectanguloAltura) => {
     respuesta.innerText = 0;
   }
   imagenAnimacion.style.transform = "rotate(360deg)";
-  imagenAnimacion.style.transition = "1s"
+  imagenAnimacion.style.transition = "1s";
 };
 
 let botonCalculoDeRectanguloPerimetro = () => {
@@ -302,7 +314,7 @@ botonCambianteRombo = () => {
   <input type="number" id="input2Rombo" />
 </div>
 <div class="card__container-respuesta">
-  <button type="button" id="calcularRombo" onclick="botonCalculoDeRomboArea()">Calcular Area</button>
+  <button type="button" id="calcularRombo" onclick="botonCalculoDeRomboArea()">Calcular Área</button>
   <p id="respuestaRombo"></p>
 </div>
   `;
@@ -320,7 +332,7 @@ botonCambianteRombo = () => {
   <input type="number" id="input1Rombo" />
 </div>
 <div class="card__container-respuesta">
-  <button type="button" id="calcularRombo" onclick="botonCalculoDeRomboPerimetro()">Calcular Perimetro</button>
+  <button type="button" id="calcularRombo" onclick="botonCalculoDeRomboPerimetro()">Calcular Perímetro</button>
   <p id="respuestaRombo"></p>
 </div>
   `;
@@ -328,7 +340,9 @@ botonCambianteRombo = () => {
 };
 
 let calcularPerimetroRombo = (romboLado) => {
-  let imagenAnimacion = document.getElementsByClassName("card")[3].children[0].children[1].children[0];
+  let imagenAnimacion =
+    document.getElementsByClassName("card")[3].children[0].children[1]
+      .children[0];
   let respuesta = document.getElementById("respuestaRombo");
   let perimetroRombo = romboLado * 4;
   if (romboLado < 0) {
@@ -341,11 +355,13 @@ let calcularPerimetroRombo = (romboLado) => {
     respuesta.innerText = 0;
   }
   imagenAnimacion.style.transform = "rotate(360deg)";
-  imagenAnimacion.style.transition = "1s"
+  imagenAnimacion.style.transition = "1s";
 };
 
 let calcularAreaRombo = (romboDiagonalMenor, romboDiagonalMayor) => {
-  let imagenAnimacion = document.getElementsByClassName("card")[3].children[0].children[1].children[0];
+  let imagenAnimacion =
+    document.getElementsByClassName("card")[3].children[0].children[1]
+      .children[0];
   let respuesta = document.getElementById("respuestaRombo");
   let areaRombo = (romboDiagonalMayor * romboDiagonalMenor) / 2;
   if (romboDiagonalMenor < 0 || romboDiagonalMayor < 0) {
@@ -358,7 +374,7 @@ let calcularAreaRombo = (romboDiagonalMenor, romboDiagonalMayor) => {
     respuesta.innerText = 0;
   }
   imagenAnimacion.style.transform = "rotate(360deg)";
-  imagenAnimacion.style.transition = "1s"
+  imagenAnimacion.style.transition = "1s";
 };
 
 let botonCalculoDeRomboPerimetro = () => {
@@ -393,7 +409,7 @@ let botonCambianteRomboide = () => {
   <input type="number" id="input2Romboide" />
 </div>
 <div class="card__container-respuesta">
-  <button type="button" id="calcularRomboide" onclick="botonCalculoDeRomboideArea()">Calcular Area</button>
+  <button type="button" id="calcularRomboide" onclick="botonCalculoDeRomboideArea()">Calcular Área</button>
   <p id="respuestaRomboide"></p>
 </div>
   `;
@@ -413,7 +429,7 @@ let botonCambianteRomboide = () => {
   <input type="number" id="input2Romboide" />
 </div>
 <div class="card__container-respuesta">
-  <button type="button" id="calcularRomboide" onclick="botonCalculoDeRomboidePerimetro()">Calcular Perimetro</button>
+  <button type="button" id="calcularRomboide" onclick="botonCalculoDeRomboidePerimetro()">Calcular Perímetro</button>
   <p id="respuestaRomboide"></p>
 </div>
   `;
@@ -421,7 +437,9 @@ let botonCambianteRomboide = () => {
 };
 
 let calcularPerimetroRomboide = (romboideBase, romboideAltura) => {
-  let imagenAnimacion = document.getElementsByClassName("card")[4].children[0].children[1].children[0];
+  let imagenAnimacion =
+    document.getElementsByClassName("card")[4].children[0].children[1]
+      .children[0];
   let respuesta = document.getElementById("respuestaRomboide");
   let perimetroRomboide = romboideBase * 2 + romboideAltura * 2;
   if (romboideBase < 0 || romboideAltura < 0) {
@@ -436,11 +454,13 @@ let calcularPerimetroRomboide = (romboideBase, romboideAltura) => {
     respuesta.innerText = 0;
   }
   imagenAnimacion.style.transform = "rotate(360deg)";
-  imagenAnimacion.style.transition = "1s"
+  imagenAnimacion.style.transition = "1s";
 };
 
 let calcularAreaRomboide = (romboideBase, romboideAltura) => {
-  let imagenAnimacion = document.getElementsByClassName("card")[4].children[0].children[1].children[0];
+  let imagenAnimacion =
+    document.getElementsByClassName("card")[4].children[0].children[1]
+      .children[0];
   let respuesta = document.getElementById("respuestaRomboide");
   let areaRomboide = romboideBase * romboideAltura;
   if (romboideBase < 0 || romboideAltura < 0) {
@@ -453,7 +473,7 @@ let calcularAreaRomboide = (romboideBase, romboideAltura) => {
     respuesta.innerText = 0;
   }
   imagenAnimacion.style.transform = "rotate(360deg)";
-  imagenAnimacion.style.transition = "1s"
+  imagenAnimacion.style.transition = "1s";
 };
 
 let botonCalculoDeRomboidePerimetro = () => {
@@ -491,7 +511,7 @@ let botonCambianteTrapecio = () => {
     <input type="number" id="input3Trapecio" />
   </div>
   <div class="card__container-respuesta">
-    <button type="button" id="calcularTrapecio" onclick="botonCalculoDeTrapecioArea()">Calcular Area</button>
+    <button type="button" id="calcularTrapecio" onclick="botonCalculoDeTrapecioArea()">Calcular Área</button>
     <p id="respuestaTrapecio"></p>
   </div>
     `;
@@ -515,7 +535,7 @@ let botonCambianteTrapecio = () => {
     <input type="number" id="input4Trapecio" />
   </div>
   <div class="card__container-respuesta">
-    <button type="button" id="calcularTrapecio" onclick="botonCalculoDeTrapecioPerimetro()">Calcular Perimetro</button>
+    <button type="button" id="calcularTrapecio" onclick="botonCalculoDeTrapecioPerimetro()">Calcular Perímetro</button>
     <p id="respuestaTrapecio"></p>
   </div>
     `;
@@ -528,7 +548,9 @@ let calcularPerimetroTrapecio = (
   TrapecioLado3,
   TrapecioLado4
 ) => {
-  let imagenAnimacion = document.getElementsByClassName("card")[5].children[0].children[1].children[0];
+  let imagenAnimacion =
+    document.getElementsByClassName("card")[5].children[0].children[1]
+      .children[0];
   let respuesta = document.getElementById("respuestaTrapecio");
   let perimetroTrapecio =
     TrapecioLado1 + TrapecioLado2 + TrapecioLado3 + TrapecioLado4;
@@ -547,7 +569,7 @@ let calcularPerimetroTrapecio = (
     respuesta.innerText = perimetroTrapecio.toFixed(1);
   }
   imagenAnimacion.style.transform = "rotate(360deg)";
-  imagenAnimacion.style.transition = "1s"
+  imagenAnimacion.style.transition = "1s";
 };
 
 let calcularAreaTrapecio = (
@@ -555,7 +577,9 @@ let calcularAreaTrapecio = (
   trapecioBaseMayor,
   trapecioAltura
 ) => {
-  let imagenAnimacion = document.getElementsByClassName("card")[5].children[0].children[1].children[0];
+  let imagenAnimacion =
+    document.getElementsByClassName("card")[5].children[0].children[1]
+      .children[0];
   let respuesta = document.getElementById("respuestaTrapecio");
   let areaTrapecio =
     (trapecioAltura * (trapecioBaseMenor + trapecioBaseMayor)) / 2;
@@ -569,7 +593,7 @@ let calcularAreaTrapecio = (
     respuesta.innerText = areaTrapecio.toFixed(1);
   }
   imagenAnimacion.style.transform = "rotate(360deg)";
-  imagenAnimacion.style.transition = "1s"
+  imagenAnimacion.style.transition = "1s";
 };
 
 let botonCalculoDeTrapecioPerimetro = () => {
@@ -608,7 +632,7 @@ let botonCambiantePentagono = () => {
   <input type="number" id="input2Pentagono" />
 </div>
 <div class="card__container-respuesta">
-  <button type="button" id="calcularPentagono" onclick="botonCalculoDePentagonoArea()">Calcular Area</button>
+  <button type="button" id="calcularPentagono" onclick="botonCalculoDePentagonoArea()">Calcular Área</button>
   <p id="respuestaPentagono"></p>
 </div>
   `;
@@ -626,7 +650,7 @@ let botonCambiantePentagono = () => {
   <input type="number" id="input1Pentagono" />
 </div>
 <div class="card__container-respuesta">
-  <button type="button" id="calcularPentagono" onclick="botonCalculoDePentagonoPerimetro()">Calcular Perimetro</button>
+  <button type="button" id="calcularPentagono" onclick="botonCalculoDePentagonoPerimetro()">Calcular Perímetro</button>
   <p id="respuestaPentagono"></p>
 </div>
   `;
@@ -634,7 +658,9 @@ let botonCambiantePentagono = () => {
 };
 
 let calcularPerimetroPentagono = (pentagonoBase) => {
-  let imagenAnimacion = document.getElementsByClassName("card")[6].children[0].children[1].children[0];
+  let imagenAnimacion =
+    document.getElementsByClassName("card")[6].children[0].children[1]
+      .children[0];
   let perimetroPentagono = pentagonoBase * 5;
   let resultado = document.getElementById("respuestaPentagono");
   if (pentagonoBase < 0) {
@@ -647,11 +673,13 @@ let calcularPerimetroPentagono = (pentagonoBase) => {
     resultado.innerText = 0;
   }
   imagenAnimacion.style.transform = "rotate(360deg)";
-  imagenAnimacion.style.transition = "1s"
+  imagenAnimacion.style.transition = "1s";
 };
 
 let calcularAreaPentagono = (pentagonoApotema, pentagonoBase) => {
-  let imagenAnimacion = document.getElementsByClassName("card")[6].children[0].children[1].children[0];
+  let imagenAnimacion =
+    document.getElementsByClassName("card")[6].children[0].children[1]
+      .children[0];
   let perimetroPentagono = pentagonoBase * 5;
   let areaPentagono = (perimetroPentagono * pentagonoApotema) / 2;
   let resultado = document.getElementById("respuestaPentagono");
@@ -665,7 +693,7 @@ let calcularAreaPentagono = (pentagonoApotema, pentagonoBase) => {
     resultado.innerText = 0;
   }
   imagenAnimacion.style.transform = "rotate(360deg)";
-  imagenAnimacion.style.transition = "1s"
+  imagenAnimacion.style.transition = "1s";
 };
 
 let botonCalculoDePentagonoPerimetro = () => {
@@ -698,7 +726,7 @@ let botonCambianteCirculo = () => {
     <input type="number" id="input1Circulo" />
   </div>
   <div class="card__container-respuesta">
-    <button type="button" id="calcularCirculo" onclick="botonCalculoDeCirculoArea()">Calcular Area</button>
+    <button type="button" id="calcularCirculo" onclick="botonCalculoDeCirculoArea()">Calcular Área</button>
     <p id="respuestaCirculo"></p>
   </div>
     `;
@@ -716,7 +744,7 @@ let botonCambianteCirculo = () => {
     <input type="number" id="input1Circulo" />
   </div>
   <div class="card__container-respuesta">
-    <button type="button" id="calcularCirculo" onclick="botonCalculoDeCirculoPerimetro()">Calcular Perimetro</button>
+    <button type="button" id="calcularCirculo" onclick="botonCalculoDeCirculoPerimetro()">Calcular Perímetro</button>
     <p id="respuestaCirculo"></p>
   </div>
     `;
@@ -724,7 +752,9 @@ let botonCambianteCirculo = () => {
 };
 
 let calcularPerimetroCirculo = (circuloDiametro) => {
-  let imagenAnimacion = document.getElementsByClassName("card")[7].children[0].children[1].children[0];
+  let imagenAnimacion =
+    document.getElementsByClassName("card")[7].children[0].children[1]
+      .children[0];
   let respuesta = document.getElementById("respuestaCirculo");
   let circuloPI = Math.PI;
   let perimetroCirculo = circuloDiametro * circuloPI;
@@ -739,11 +769,13 @@ let calcularPerimetroCirculo = (circuloDiametro) => {
     console.log(perimetroCirculo);
   }
   imagenAnimacion.style.transform = "rotate(360deg)";
-  imagenAnimacion.style.transition = "1s"
+  imagenAnimacion.style.transition = "1s";
 };
 
 let calcularAreaCirculo = (circuloRadio) => {
-  let imagenAnimacion = document.getElementsByClassName("card")[7].children[0].children[1].children[0];
+  let imagenAnimacion =
+    document.getElementsByClassName("card")[7].children[0].children[1]
+      .children[0];
   let respuesta = document.getElementById("respuestaCirculo");
   let circuloPI = Math.PI;
   let areaCirculo = circuloPI * circuloRadio ** 2;
@@ -755,7 +787,7 @@ let calcularAreaCirculo = (circuloRadio) => {
     respuesta.innerText = 0;
   }
   imagenAnimacion.style.transform = "rotate(360deg)";
-  imagenAnimacion.style.transition = "2s"
+  imagenAnimacion.style.transition = "2s";
 };
 
 let botonCalculoDeCirculoPerimetro = () => {
