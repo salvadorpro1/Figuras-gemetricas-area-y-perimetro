@@ -193,7 +193,7 @@ botonCalculoDeCuadradoArea = () => {
   calcularAreaCuadrado(ladoCuadrado);
 };
 
-//Rectangulo
+//Rectángulo 
 
 let botonCambianteRectangulo = () => {
   let rectangulo = document.getElementById("rectangulo");
@@ -201,9 +201,9 @@ let botonCambianteRectangulo = () => {
   if (botonCambioRectangulo.innerText == "Área") {
     rectangulo.innerHTML = `
 <div class="card__header">
-<h3>Rectangulo</h3>
+<h3>Rectángulo </h3>
 <div class="card__img-boton">
-<img src="../img/rectangulo.png" alt="Figura de un Rectangulo" />
+<img src="../img/rectangulo.png" alt="Figura de un Rectángulo " />
 <button type="button" id="botonCambioRectangulo" onclick="botonCambianteRectangulo()">Perímetro</button>
 </div>
 </div>
@@ -221,9 +221,9 @@ let botonCambianteRectangulo = () => {
   } else {
     rectangulo.innerHTML = `
 <div class="card__header">
-<h3>Rectangulo</h3>
+<h3>Rectángulo </h3>
 <div class="card__img-boton">
-<img src="../img/rectangulo.png" alt="Figura de un Rectangulo" />
+<img src="../img/rectangulo.png" alt="Figura de un Rectángulo " />
 <button type="button" id="botonCambioRectangulo" onclick="botonCambianteRectangulo()">Área</button>
 </div>
 </div>
@@ -611,7 +611,7 @@ let botonCalculoDeTrapecioArea = () => {
   calcularAreaTrapecio(baseMenor, baseMayor, altura);
 };
 
-//Pentagono
+//Pentágono
 
 let botonCambiantePentagono = () => {
   let pentagono = document.getElementById("pentagono");
@@ -619,7 +619,7 @@ let botonCambiantePentagono = () => {
   if (botonCambioPentagono.innerText == "Área") {
     pentagono.innerHTML = `
   <div class="card__header">
-  <h3>Pentagono</h3>
+  <h3>Pentágono</h3>
   <div class="card__img-boton">
   <img src="../img/pentagono.png" alt="Figura de un pentagono" />
   <button type="button" id="botonCambioPentagono" onclick="botonCambiantePentagono()">Perímetro</button>
@@ -639,7 +639,7 @@ let botonCambiantePentagono = () => {
   } else {
     pentagono.innerHTML = `
   <div class="card__header">
-  <h3>Pentagono</h3>
+  <h3>Pentágono</h3>
   <div class="card__img-boton">
   <img src="../img/pentagono.png" alt="Figura de un pentagono" />
   <button type="button" id="botonCambioPentagono" onclick="botonCambiantePentagono()">Área</button>
